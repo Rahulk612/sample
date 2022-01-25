@@ -23,11 +23,11 @@ app.get("/", function (req, res) {
 
 app.use("/",userController)
 
-app.use("/internshala/resume", resume);
+app.use("/resume", resume);
 
 // app.use("/internshala", userController);
 
-app.use("/internshala/products", productController);
+app.use("/products", productController);
 
 app.listen(process.env.PORT || 5000);
 module.exports = app;

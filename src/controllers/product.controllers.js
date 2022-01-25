@@ -23,17 +23,17 @@ const router = express.Router();
 //   }
 // });
 
-// router.get("/interns", async (req, res) => {
-//   try {
-//     let data = await Products.find().lean().exec();
-//     // console.log("data:", data);
-//     dummyData = JSON.stringify(data);
+router.get("/interns", async (req, res) => {
+  try {
+    let data = await Products.find().lean().exec();
+    // console.log("data:", data);
+    dummyData = JSON.stringify(data);
 
-//     res.render("interns", { dummyData: dummyData ,user:""});
-//   } catch (error) {
-//     return res.status(500).send(error.massage);
-//   }
-// });
+    res.render("interns", { dummyData: dummyData ,user:""});
+  } catch (error) {
+    return res.status(500).send(error.massage);
+  }
+});
 
 
 
