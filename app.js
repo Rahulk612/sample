@@ -7,7 +7,7 @@ const app = express();
 
 // const productController = require("./src/controllers/product.controllers");
 
-const userController = require("./src/controllers/user.controller");
+// const userController = require("./src/controllers/user.controller");
 
 app.use(express.urlencoded({ extended: true }));
 
@@ -22,11 +22,11 @@ app.get("/", function (req, res) {
 });
 
 
-app.use("/internshala/resume", resume);
+// app.use("/internshala/resume", resume);
 
-app.use("/internshala", userController);
+// app.use("/internshala", userController);
 
-app.use("/internshala/products", productController);
+// app.use("/internshala/products", productController);
 
 app.listen(process.env.PORT || 5000);
 module.exports = app;
