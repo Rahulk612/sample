@@ -27,7 +27,7 @@ app.get("/", function (req, res) {
 
 // app.use("/internshala", userController);
 
-app.use("/internshala/products", productController);
+// app.use("/internshala/products", productController);
 
 app.listen(process.env.PORT || 5000);
 module.exports = app;
