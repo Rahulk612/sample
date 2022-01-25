@@ -15,16 +15,16 @@ function loginPage(){
             <div class="orAfter"></div>
         </div>
             <div class="inputModel">
-                <form action="/internshala/products/jobs" method="post">
+                <form action="/products/jobs" method="post">
                     <p id="email">Email</p>
                     <input class="inputs" id="emailLogin" type="email" name="email" placeholder="jhon@example.com">
                     <div id="emailMessage">
-                        <p id="emailNameAlert"><img id="alertImg" src="./images/alert.png"> This field is required</p>
+                        <p id="emailNameAlert"><img id="alertImg" src="/images/alert.png"> This field is required</p>
                     </div>
                     <p id="password">Password</p>
                     <input class="inputs" id="passwordLogin"  type="password" name="password" placeholder="Must be atleast 6 characters">
                     <div id="passMessage">
-                        <p id="passNameAlert"><img id="alertImg" src="./images/alert.png"> This field is required</p>
+                        <p id="passNameAlert"><img id="alertImg" src="/images/alert.png"> This field is required</p>
                     </div>
                     <div class="forgotPass">
                         <a href=""><p>Forgot Password?</p></a>

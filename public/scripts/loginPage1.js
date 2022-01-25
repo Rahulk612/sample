@@ -15,7 +15,7 @@ function loginPage() {
             <div class="orAfter"></div>
         </div>
             <div class="inputModel">
-                <form action="/internshala/products/interns" method="post">
+                <form action="/products/interns" method="post">
                     <p id="email">Email</p>
                     <input class="inputs" id="emailLogin" type="email" name="email" placeholder="jhon@example.com">
                     <div id="emailMessage">

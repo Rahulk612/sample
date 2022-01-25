@@ -12,12 +12,13 @@
     />
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="/css/loginpage.css" /> 
+    <!-- <link rel="stylesheet" href="/css/loginpage.css" />  -->
     <link rel="stylesheet" href="/css/afterLogin.css">
     <link rel="stylesheet" href="/css/navBar.css" /> 
     <link rel="stylesheet" href="/css/footer.css" />
     <link rel="stylesheet" href="/css/modifiedNav.css">
     <link rel="stylesheet" href="/css/productPage.css" />
+    <link rel="stylesheet" href="/css/loginPage.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -287,7 +288,7 @@
       let div = document.createElement("div");
       div.addEventListener("click", (e) => {
         localStorage.setItem("individualProductItem", JSON.stringify(item));
-        window.location.href = "individualJob";
+        window.location.href = "/products/individualJob";
       });
       // console.log('a:', a)
       div.innerHTML = a;
@@ -437,7 +438,7 @@
                                                                <li><a href="#">Delete My Account</a></li>
                                                                 </ul>
                                                                 </div>
-                                                               <li ><a href="/internshala/logout">Logout</a></li>
+                                                               <li ><a href="/logout">Logout</a></li>
                                                             </ul>
                                                             </div>`;
 
@@ -582,11 +583,6 @@ import loginPage from "/scripts/loginPage.js";
     });
 
 
-  function theFunction(){
-    console.log("logout Clicked")
-    localStorage.removeItem("interPage");
-    window.location.href = "/internshala/logout"
-  }
-
+ 
   // *****
 </script>

@@ -34,55 +34,55 @@ router.get("/productPage", async (req, res) => {
 
 // mannual login and registration
 
-// router.post("/login", async (req, res) => {
-//   try {
-//     console.log("UserLogin");
-//     let user = await Student.findOne({
-//       email: req.body.email,
-//     });
-//     if (!user) return res.status(404).send({ message: "Invalid user" });
+router.post("/login", async (req, res) => {
+  try {
+    console.log("UserLogin");
+    let user = await Student.findOne({
+      email: req.body.email,
+    });
+    if (!user) return res.status(404).send({ message: "Invalid user" });
 
-//     const match = user.checkPassword(req.body.password);
+    const match = user.checkPassword(req.body.password);
 
-//     if (!match)
-//       return res.status(401).send({ message: "Password is incorrect" });
+    if (!match)
+      return res.status(401).send({ message: "Password is incorrect" });
 
-//     let data = await Product.find().lean().exec();
-//     // console.log("data:", data);
-//     dummyData = JSON.stringify(data);
-//     user = JSON.stringify(user);
-//     return res
-//       .status(201)
-//       .render("interns", { dummyData: dummyData, user: user });
-//   } catch (err) {
-//     res.send(err.message);
-//   }
-// });
+    let data = await Product.find().lean().exec();
+    // console.log("data:", data);
+    dummyData = JSON.stringify(data);
+    user = JSON.stringify(user);
+    return res
+      .status(201)
+      .render("interns", { dummyData: dummyData, user: user });
+  } catch (err) {
+    res.send(err.message);
+  }
+});
 
-// router.post("/products/jobs", async (req, res) => {
-//   try {
-//     console.log("UserLogin");
-//     let user = await Student.findOne({
-//       email: req.body.email,
-//     });
-//     if (!user) return res.status(404).send({ message: "Invalid user" });
+router.post("/products/jobs", async (req, res) => {
+  try {
+    console.log("UserLogin");
+    let user = await Student.findOne({
+      email: req.body.email,
+    });
+    if (!user) return res.status(404).send({ message: "Invalid user" });
 
-//     const match = user.checkPassword(req.body.password);
+    const match = user.checkPassword(req.body.password);
 
-//     if (!match)
-//       return res.status(401).send({ message: "Password is incorrect" });
+    if (!match)
+      return res.status(401).send({ message: "Password is incorrect" });
 
-//     let data = await Product.find().lean().exec();
-//     // console.log("data:", data);
-//     dummyData = JSON.stringify(data);
-//     user = JSON.stringify(user);
-//     return res
-//       .status(201)
-//       .render("jobs", { dummyData: dummyData, user: user });
-//   } catch (error) {
-//     return res.status(500).send(error.massage);
-//   }
-// });
+    let data = await Product.find().lean().exec();
+    // console.log("data:", data);
+    dummyData = JSON.stringify(data);
+    user = JSON.stringify(user);
+    return res
+      .status(201)
+      .render("jobs", { dummyData: dummyData, user: user });
+  } catch (error) {
+    return res.status(500).send(error.massage);
+  }
+});
 
 
 router.post("/products/interns", async (req, res) => {
