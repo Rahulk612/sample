@@ -4,7 +4,7 @@ const router = express.Router();
 const path=require("path");
 const upload = require("../middleware/user");
 
-const Resume = require('../models/resumeSchema')
+// const Resume = require('../models/resumeSchema')
 
 router.get("", (req, res) => {
     res.render("resumePage")
