@@ -1,7 +1,7 @@
 function afterLogin(){
     return `<nav id="navContainer">
     <div class="navBar">
-        <div class="logo"><a href="/"><img src="https://internshala.com/static/images/common/new_internshala_logo.svg" alt=""></a></div>
+        <div class="logo"><a href="/products/jobs"><img src="https://internshala.com/static/images/common/new_internshala_logo.svg" alt=""></a></div>
         <div class="navLinks">
             <ul class="links">
                 <li>

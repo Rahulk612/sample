@@ -184,25 +184,10 @@ function navBar(){
                                 <li><a href="#">Revit</a></li>
                             </ul>
                         </li>
-                        <!-- <li class="specialization">
-                            <a class="specializationName" href="#">Specializations</a>
-                            <ul class="specializationSubMenu subMenu">
-                                <li><a href="#">J</a></li>
-                                <li><a href="#">Business & Management</a></li>
-                                <li><a href="#">Core Engineering</a></li>
-                                <li><a href="#">Data Science</a></li>
-                                <li><a href="#">Design</a></li>
-                                <li><a href="#">Creative Arts</a></li>
-                                <li><a href="#">Language</a></li>
-                                <li><a href="#">Career Development</a></li>
-                                <li><a href="#">Achitecture</a></li>
-                                <li><a href="#">Specializations</a></li>
-                            </ul>
-                        </li> -->
                     </ul>
                 </li>
                 <li class="fresher">
-                    <a class="fresherColor" href="#">Fresher Jobs</a>
+                    <a class="fresherColor" href="/products/jobs">Fresher Jobs</a>
                 </li>
                 <li>
                     <button id="navbarLogin">Login</button>
@@ -210,7 +195,7 @@ function navBar(){
                 <li class="registerButton">
                     <button style="cursor: pointer;" id="register">Register<i id="register_icon" class='bx bx-caret-down arrow3'></i></button>
                     <ul class="registerSubMenu subMenuSmall">
-                        <li><a href="#">As a Student</a></li>
+                        <li><a href="/studentRegistration">As a Student</a></li>
                         <li><a href="#">As an Employeer</a></li>
                     </ul>
                 </li>
