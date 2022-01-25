@@ -85,57 +85,57 @@ router.get("/productPage", async (req, res) => {
 // });
 
 
-// router.post("/products/interns", async (req, res) => {
-//   try {
-//     console.log("UserLogin");
-//     let user = await Student.findOne({
-//       email: req.body.email,
-//     });
-//     if (!user) return res.status(404).send({ message: "Invalid user" });
+router.post("/products/interns", async (req, res) => {
+  try {
+    console.log("UserLogin");
+    let user = await Student.findOne({
+      email: req.body.email,
+    });
+    if (!user) return res.status(404).send({ message: "Invalid user" });
 
-//     const match = user.checkPassword(req.body.password);
+    const match = user.checkPassword(req.body.password);
 
-//     if (!match)
-//       return res.status(401).send({ message: "Password is incorrect" });
+    if (!match)
+      return res.status(401).send({ message: "Password is incorrect" });
 
-//     user = JSON.stringify(user)
+    user = JSON.stringify(user)
 
-//     let data = await Product.find().lean().exec();
-//     // console.log("data:", data);
-//     dummyData = JSON.stringify(data);
-//     return res.status(201).render("interns", { dummyData: dummyData, user: user });
-//   } catch (error) {
-//     return res.status(500).send(error.massage);
-//   }
-// });
+    let data = await Product.find().lean().exec();
+    // console.log("data:", data);
+    dummyData = JSON.stringify(data);
+    return res.status(201).render("interns", { dummyData: dummyData, user: user });
+  } catch (error) {
+    return res.status(500).send(error.massage);
+  }
+});
 
-// router.post("/mannual", async (req, res) => {
-//   try {
-//     console.log("UserCreation");
-//     let user = await Student.findOne({ email: req.body.email });
-//     if (user)
-//       return res
-//         .status(404)
-//         .send("This email is already registered try new email");
+router.post("/mannual", async (req, res) => {
+  try {
+    console.log("UserCreation");
+    let user = await Student.findOne({ email: req.body.email });
+    if (user)
+      return res
+        .status(404)
+        .send("This email is already registered try new email");
 
-//     user = await Student.create({
-//       first_name: req.body.first_name,
-//       last_name: req.body.last_name,
-//       email: req.body.email,
-//       password: req.body.password,
-//     });
-//     user = JSON.stringify(user);
-//     let data = await Product.find().lean().exec();
-//     // console.log("data:", data);
-//     dummyData = JSON.stringify(data);
-//     console.log(user);
-//     return res
-//       .status(201)
-//       .render("interns", { dummyData: dummyData, user: user });
-//   } catch (err) {
-//     res.status(500).send(err.message);
-//   }
-// });
+    user = await Student.create({
+      first_name: req.body.first_name,
+      last_name: req.body.last_name,
+      email: req.body.email,
+      password: req.body.password,
+    });
+    user = JSON.stringify(user);
+    let data = await Product.find().lean().exec();
+    // console.log("data:", data);
+    dummyData = JSON.stringify(data);
+    console.log(user);
+    return res
+      .status(201)
+      .render("interns", { dummyData: dummyData, user: user });
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
+});
 
 // router.get("/users", async (req, res) => {
 //   try {
