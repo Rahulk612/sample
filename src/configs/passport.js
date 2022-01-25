@@ -13,7 +13,7 @@ passport.use(
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       callbackURL:
         `http://localhost:${process.env.PORT}/auth/google/callback` ||
-        `http://localhost:5000/auth/google/callback`,
+        `http://localhost:5004/auth/google/callback`,
       userProfileUrl: "https://**www**.googleapis.com/oauth2/v3/userinfo",
       passReqToCallback: true,
     },
