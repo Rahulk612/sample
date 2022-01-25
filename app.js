@@ -1,13 +1,13 @@
 const express = require("express");
 const app = express();
 
-const resume = require("./src/controllers/resumecontroller");
+// const resume = require("./src/controllers/resumecontroller");
 
-// const passport = require("./src/configs/passport");
+// // const passport = require("./src/configs/passport");
 
-const productController = require("./src/controllers/product.controllers");
+// const productController = require("./src/controllers/product.controllers");
 
-const userController = require("./src/controllers/user.controller");
+// const userController = require("./src/controllers/user.controller");
 
 app.use(express.urlencoded({ extended: true }));
 
@@ -21,9 +21,9 @@ app.get("/", function (req, res) {
   res.render("index");
 });
 
-app.use("/",userController)
+// app.use("/",userController)
 
-app.use("/internshala/resume", resume);
+// app.use("/internshala/resume", resume);
 
 // app.use("/internshala", userController);
 
