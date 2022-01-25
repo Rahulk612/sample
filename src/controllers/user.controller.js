@@ -2,7 +2,7 @@ const express = require("express");
 
 require("dotenv").config();
 
-// const Student = require("../models/studentRegister.model");
+const Student = require("../models/studentRegister.model");
 
 const Product = require("../models/products.model");
 
