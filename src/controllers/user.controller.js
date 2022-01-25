@@ -111,11 +111,11 @@ router.post("/products/interns", async (req, res) => {
 
 router.post("/mannual", async (req, res) => {
   try {
-    // let user = await Student.findOne({ email: req.body.email });
-    // if (user)
-    //   return res
-    //     .status(404)
-    //     .send("This email is already registered try new email");
+    let user = await Student.findOne({ email: req.body.email });
+    if (user)
+      return res
+        .status(404)
+        .send("This email is already registered try new email");
 
     user = await Student.create({
       first_name: req.body.first_name,

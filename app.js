@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 
+const connect = require("./src/configs/db")
+
 const resume = require("./src/controllers/resumecontroller");
 
 const passport = require("./src/configs/passport");
@@ -65,5 +67,7 @@ app.get("/auth/google/failure", (req, res) => {
   return res.send("Failed");
 });
 
-app.listen(process.env.PORT || 5000);
+app.listen(process.env.PORT || 5000, async (req,res)=> {
+  await connect()
+});
 module.exports = app;
