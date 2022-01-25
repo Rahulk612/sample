@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <title>Intershala</title>
-    <link rel="icon" href="https://pbs.twimg.com/profile_images/1267326528884375560/GXC-xTlu_400x400.jpg">
-    <link rel="stylesheet" href="navBar.css">
-    <link rel="stylesheet" href="footer.css">
+    <!-- <link rel="icon" href="https://pbs.twimg.com/profile_images/1267326528884375560/GXC-xTlu_400x400.jpg"> -->
+    <link rel="stylesheet" href="/css/navBar.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/loginPage.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="/css/csosoul.css">
@@ -440,45 +440,45 @@
         document.querySelector(".inputModel").style.marginTop = "6%"
     })
 
-    document.querySelector("#buttonLogin").addEventListener("click",function(event){
-        event.preventDefault()
-        let email = document.getElementById("emailLogin").value;
+    // document.querySelector("#buttonLogin").addEventListener("click",function(event){
+    //     event.preventDefault()
+    //     let email = document.getElementById("emailLogin").value;
 
-        let passWord = document.getElementById("passwordLogin").value;
-        let emailFlag = false;
-        let passFlag = false;
-        let details = null;
-        usersData.map((item)=>{
-            if(email==item.email){
-                emailFlag = true;
-                details = item;
-            }
-            if(passWord==item.password){
-                passFlag = true;
-                details = item
-            }
-        })
+    //     let passWord = document.getElementById("passwordLogin").value;
+    //     let emailFlag = false;
+    //     let passFlag = false;
+    //     let details = null;
+    //     usersData.map((item)=>{
+    //         if(email==item.email){
+    //             emailFlag = true;
+    //             details = item;
+    //         }
+    //         if(passWord==item.password){
+    //             passFlag = true;
+    //             details = item
+    //         }
+    //     })
         
 
-        if(emailFlag==false && passFlag==true){
-            document.getElementById("emailMessage").style.display = "block";
+    //     if(emailFlag==false && passFlag==true){
+    //         document.getElementById("emailMessage").style.display = "block";
 
-            document.getElementById("emailNameAlert").innerHTML = `<p id="emailNameAlert"><img id="alertImg" src="./images/alert.png">Please enter a valid email address</p>`
+    //         document.getElementById("emailNameAlert").innerHTML = `<p id="emailNameAlert"><img id="alertImg" src="./images/alert.png">Please enter a valid email address</p>`
 
-        }else if(passFlag==false && emailFlag==true){
-            document.getElementById("passMessage").style.display = "block";
-            document.getElementById("passNameAlert").innerHTML = `<p id="passNameAlert"><img id="alertImg" src="./images/alert.png">Please enter a valid password</p>`
+    //     }else if(passFlag==false && emailFlag==true){
+    //         document.getElementById("passMessage").style.display = "block";
+    //         document.getElementById("passNameAlert").innerHTML = `<p id="passNameAlert"><img id="alertImg" src="./images/alert.png">Please enter a valid password</p>`
 
-        }
+    //     }
 
-        if(emailFlag && passFlag){
+    //     if(emailFlag && passFlag){
 
-            localStorage.setItem('singleUserLoginDetails',JSON.stringify(details))
+    //         localStorage.setItem('singleUserLoginDetails',JSON.stringify(details))
 
-            window.location.href = "../productPage.html";
-        }
+    //         window.location.href = "../productPage.html";
+    //     }
         
-    })
+    // })
 
     
     

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/f1949c3017.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Cover Letter</title>
+    <link
+      rel="icon"
+      href="https://pbs.twimg.com/profile_images/1267326528884375560/GXC-xTlu_400x400.jpg"
+    />
+    <link rel="stylesheet" href="/css/afterLogin.css" />
+    <link rel="stylesheet" href="/css/navBar.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+
+    <link rel="stylesheet" href="/css/afterLogin.css" />
+
+    <!-- <link rel="stylesheet" href="css/individualJob.css" /> -->
+
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    /* body {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    } */
+
+    .container {
+      width: 900px;
+      /* height: 1000px; */
+      margin: auto;
+      margin-top: 100px;
+      /* border: 1px solid black; */
+    }
+    /* hr {
+      width: 880px;
+    } */
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      height: 40px;
+      width: 130px;
+      font-size: 16px;
+      font-weight: 600;
+      background-color: #0085ec;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      margin-top: 20px;
+      /* margin: auto; */
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .btn:hover {
+      background-color: #0b72c1;
+      cursor: pointer;
+      color: white;
+    }
+
+    #firstText {
+      margin-bottom: 10px;
+      width: 900px;
+      border-top: none;
+    }
+
+    #h1 {
+      font-weight: 700;
+      font-size: 32px;
+      color: #333333;
+      line-height: 40px;
+    }
+
+    #h2 {
+      font-weight: 600;
+      font-size: 22px;
+      color: #333333;
+      line-height: 32px;
+      margin-top: 20px;
+    }
+
+    #p {
+      /* font-weight: 00px; */
+      font-size: 15px;
+      line-height: 22px;
+      color: #525050;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+
+    .copy {
+      display: flex;
+      color: #4aafe5;
+    }
+
+    .copy:hover {
+      cursor: pointer;
+    }
+
+    .far {
+      margin-top: 20px;
+      margin-right: 5px;
+      color: #4aafe5;
+    }
+
+    .copyNedit {
+      color: #4aafe5;
+      font-weight: 500;
+    }
+    .bulb {
+      display: flex;
+      /* border: 1px solid black; */
+      width: 898px;
+      height: 40px;
+      margin-top: 20px;
+      border-bottom: none;
+      background-color: #eafcff;
+      padding-bottom: 10px;
+      align-items: center;
+      vertical-align: top;
+    }
+    .bulb img {
+      height: 20px;
+      width: 20px;
+      margin-top: 8px;
+      margin-right: 5px;
+      /* size: 20px; */
+    }
+    .bulbText {
+      /* font-size: 18px; */
+      margin-top: -25px;
+      color: #4aafe5;
+    }
+    #text {
+      border: 0.5px solid grey;
+    }
+    #text::placeholder {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      padding-left: 8px;
+      padding-top: 10px;
+    }
+    .textArea {
+      margin-top: 25px;
+      width: 100%;
+    }
+    .textArea::placeholder {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      padding-left: 8px;
+      padding-top: 10px;
+    }
+    .blur {
+      color: grey;
+    }
+    #checkOut {
+      position: absolute;
+      left: 50%;
+      top: 700px;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      display: none;
+      z-index: 20;
+      /* display: flex; */
+      justify-content: space-around;
+      padding: 10px;
+      border-radius: 10px;
+      width: 530px;
+      height: 180px;
+    }
+    #backGround {
+      height: 1100px;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none;
+      letter-spacing: 0.3px;
+    }
+
+    /********************************************* Rahul Css ************************************** */
+    .nameandMail {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+      padding-top: 5%;
+      line-height: 23px;
+    }
+
+    .messageDiv:hover .messageImg {
+      background-image: url(./images/message_new_hover.svg);
+    }
+    #userName {
+      font-weight: 600;
+      font-size: 14.5px;
+    }
+    .ratingsDiv {
+      display: flex;
+      margin-top: 20px;
+      justify-content: space-between;
+      border: 1px solid lightgray;
+      height: 60px;
+      border-left: none;
+      border-right: none;
+    }
+    .ratingsDiv:hover {
+      color: #00a5ec;
+    }
+    #starRate {
+      font-size: 15px;
+      color: #ffc107;
+    }
+    #chevronIcon {
+      margin-left: -5px;
+      font-size: 30px;
+      font-weight: 100;
+    }
+    #moreOptions {
+      display: flex;
+      width: 100%;
+      /* position: absolute; */
+      justify-content: space-between;
+    }
+    #manageOptions {
+      display: flex;
+      width: 100%;
+      /* position: absolute; */
+      justify-content: space-between;
+    }
+    #moreIcon {
+      font-size: 30px;
+      transform: rotate(90deg);
+    }
+    #moreSubMenu {
+      background-color: #fff;
+      border-top: none;
+      display: none;
+      margin-left: 20px;
+    }
+    #manageSubMenu {
+      background-color: #fff;
+      border-top: none;
+      display: none;
+      margin-left: 40px;
+    }
+    #hTag {
+      color: #333333;
+      font-size: 32px;
+      font-weight: 700;
+    }
+    #tipsIcon{
+      margin-top: 10px;
+      transform: rotate(90deg);
+      font-size: 25px;
+    }
+  </style>
+
+  <body>
+    <div id="navCont"></div>
+    <div class="container">
+      <div id="dynamic"></div>
+      <!-- <h1 id="h1">
+        Executive Assistant To CXO internship at CMS IT <br />
+        Services
+      </h1> -->
+      <hr
+        style="
+          width: 900px;
+          margin-left: 0px;
+          border-bottom: none;
+          border-color: rgb(217, 213, 213);
+        "
+      />
+      <h2 id="h2">Cover letter</h2>
+
+      <p id="p">Why should you be hired for this role?</p>
+      <div class="copy">
+        <i class="far fa-copy"></i>
+        <p class="copyNedit" id="p" style="color: #00a5ec; padding-top: 1px">
+          Copy from your last application & edit
+        </p>
+      </div>
+      <div
+        id="bulbWalaPart"
+        style="background-color: #eafcff; margin-bottom: 20px"
+      >
+        <div class="bulb">
+          <img
+            src="https://internshala.com/static/images/student/application/bulb.svg"
+            alt=""
+            style="width: 40px"
+          />
+          <p id="p" style="margin-top: 9px;" class="bulbText">See tips to answer this question</p><i style="margin-left: 65%; margin-top: 5px;" id="tipsIcon" class='bx bx-chevron-right second'></i>
+        </div>
+
+        <div id="ext"></div>
+      </div>
+
+      <!-- <select name="" id="firstText">
+            <option value="">
+                
+
+
+            </option>
+            <option value="">
+                <ul>
+                    <li>Highlight your strengths - mention any experience (internship/job experience or extra-curricular
+                        activities), accomplishments, skills that are relevant to the role.</li>
+                </ul>
+            </option>
+            <option value="">
+                <ul>
+                    <li>Show enthusiasm - mention what excites you about this role and the company. You can go through
+                        their website/ social media to understand what interests you.</li>
+                </ul>
+            </option>
+            <option value="">Do not copy answers from the internet.</option>
+        </select> -->
+      <!-- <form action=""> -->
+      <textarea
+        name=""
+        id="text"
+        class="textArea"
+        cols="120"
+        rows="10"
+        required
+        placeholder="Employers see the answer to this questioneven before they view your resume to answer this question carefully and add relevant information like your skills/experience and why you find the role exciting."
+      ></textarea>
+      <h2 id="h2">Availability</h2>
+      <p id="p">
+        Are you available for 3 months, starting immediately, for a full-time
+        internship at Bangalore? If not, what is the time period you are
+        available for and the earliest date you can start this internship on?
+      </p>
+      <p id="p" class="blur">
+        The hiring for this internship will be online and the company will
+        provide work from home/deferred joining till current COVID-19 situation
+        improves
+      </p>
+      <textarea
+        name=""
+        id=""
+        class="textArea"
+        cols="120"
+        rows="10"
+        required
+        placeholder="e.g. I am available full time in Pune for the next 6 months, but will have exams for 15 days in May."
+      ></textarea>
+      <button class="btn" id="submitBTN">Submit</button>
+      <!-- </form> -->
+    </div>
+    <div>
+      <div id="checkOut">
+        <div id="tickPart">
+          <img
+            style="
+              width: 80px;
+              height: 100px;
+              padding-top: 35px;
+              border-radius: 10px;
+            "
+            src="https://www.penndot.gov/about-us/funding/Pages/img/green-circle-checkmark.png"
+            alt=""
+          />
+        </div>
+        <div id="success">
+          <p id="p" style="font-weight: 700; font-size: 18px">
+            Your Application has been submitted!
+          </p>
+          <p id="p" style="color: gray">
+            You can track your status on your dashboard
+          </p>
+          <div
+            style="
+              margin-left: 200px;
+              border: 1px solid #4aafe5;
+              color: #4aafe5;
+              padding: 8px;
+              font-weight: 600;
+              margin-top: 40px;
+              border-radius: 5px;
+              cursor: pointer;
+            "
+            id="goToJob"
+          >
+            Go to job search
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="backGround"></div>
+    <div id="footerDiv"></div>
+  </body>
+</html>
+
+<script type="module">
+  import footer from "/scripts/footer.js";
+  let footers = document.getElementById("footerDiv");
+  footers.innerHTML = footer();
+
+  let cont = document.getElementById("navCont");
+
+  let bulbWalaPart = document.getElementById("bulbWalaPart");
+
+  let ex = false;
+
+  let dynamic = document.getElementById("dynamic");
+  //   let x  = JSON.parse(localStorage.getItem("individualProductItem"));
+  let x = {
+    title: "Bussiness Development Associate",
+    company: "Masai",
+  };
+
+
+  // document.getElementById("tipsIcon").addEventListener("click",()=>{
+      
+  // })
+  console.log(x.title);
+  let hTag = document.createElement("h1");
+  hTag.innerHTML = x.title + " at " + x.company;
+  hTag.setAttribute("id", "hTag");
+  dynamic.append(hTag);
+
+  bulbWalaPart.addEventListener("click", () => {
+    ex = ~ex;
+    let div = document.createElement("div");
+    document.getElementById("ext").innerHTML = "";
+    let a;
+    
+    if (ex) {
+      document.getElementById("tipsIcon").style.transform = "rotate(-90deg)"
+      a = `<hr style="border:#A4D4FC 0.5px solid;border-bottom: none;width: 90%; margin-left:30px; margin-top:10px">
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 14px; margin-left:35px">
+            <ul>
+                <li style="margin-top: 20px;"><strong style="font-weight: 600;">Highlight your strengths -</strong> mention any experience (internship/job experience or extra-curricular activities), accomplishments, skills that are relevant to the role.</li>
+                <li style="margin-top: 20px;"><strong style="font-weight: 600;">Show enthusiasm -</strong> mention what excites you about this role and the company. You can go through their website/ social media to understand what interests you.</li>
+                <li style="margin-top: 20px;margin-bottom: 20px;"><strong style="font-weight: 600;">Do not copy answers</strong> from the internet.</li>
+            </ul>
+        </div>`;
+      div.style.height = "175px";
+    } else {
+      document.getElementById("tipsIcon").style.transform = "rotate(90deg)"
+      a = "";
+      div.style.height = "0px";
+    }
+
+    // let ul=document.createElement("ul")
+    div.innerHTML = a;
+
+    document.getElementById("ext").append(div);
+  });
+
+  document.getElementById("submitBTN").addEventListener("click", (event) => {
+    event.preventDefault();
+    document.getElementById("checkOut").style.display = "flex";
+    document.getElementById("backGround").style.display = "inline";
+    console.log("Bandiya");
+  });
+
+  
+
+  import navBar from "/scripts/afterLoginNavbar.js";
+  import navBarRegistration from "/scripts/navBarforRegistration.js";
+
+  let all = JSON.parse(localStorage.getItem("UserDeatils"));
+  console.log(all);
+
+  if (!all) {
+    console.log("Without");
+    cont.innerHTML = navBarRegistration();
+    document.querySelector(".subMenuSmall").style.height = "150px";
+    document.querySelector(".subMenuSmall").style.width = "200px";
+    document.querySelector(".subMenuSmall").style.marginLeft = "20px";
+  } else {
+    console.log("With");
+    cont.innerHTML = navBar();
+  }
+
+
+  document.getElementById("goToJob").addEventListener("click", () => {
+    console.log("for"+all)
+    localStorage.setItem("interPage",JSON.stringify(all))
+    window.location.href = "/internshala/products/jobs";
+  });
+
+  let initial = all.first_name;
+  console.log("smdvb" + initial);
+
+  document.getElementById("userInitial").innerHTML = initial[0].toUpperCase();
+
+  document.querySelector(".subMenuSmall").style.height = "420px";
+
+  document.querySelector(".subMenuSmall").style.width = "250px";
+
+  document.querySelector(".subMenuSmall").style.left = "-310%";
+
+  document.querySelector(".subMenuSmall").innerHTML = `<li>
+                                                        <div class="nameandMail">
+                                                            <div id="userName">${all.first_name} ${all.last_name}</div>
+                                                        
+                                                            <div>${all.email}</div>    
+                                                        </div>
+                                                           
+                                                        </li>
+                                                         <li class="ratingsDiv">
+                                                            <div style="display:flex , justify-content:center">
+                                                                <i id="starRate" class='bx bxs-star'></i><span style="margin-left:10px">4.1</span>
+                                                            </div>
+                                                            <div style="display:flex">
+                                                                <span>Know More</span><i id="chevronIcon" class='bx bx-chevron-right'></i>
+                                                            </div>
+                                                            </li>
+                                                         <li><a href="#">My Application</a></li>
+                                                         <li><a href="#">Edit Resume</a></li>
+                                                         <li><a href="#">Edit Preferences</a></li>
+                                                         <li><a href="#">Safety Tips</a></li>
+                                                         <li><a href="#">Help Center</a></li>
+                                                         <li>
+                                                            
+                                                            <a id="moreOptions" href="#">More<i id="moreIcon" class='bx bx-chevron-right first'></i></a></li>
+                                                            <div id="moreSubMenu">
+                                                            <ul>
+                                                               <li>
+                                                                <a id="manageOptions" href="#">Manage Account<i id="moreIcon" class='bx bx-chevron-right second'></i></a></li>
+                                                               <div id="manageSubMenu">
+                                                                <ul>
+                                                               <li><a href="#">Change Password</a></li>
+                                                               <li><a href="#">Chnage Email Address</a></li>
+                                                               <li><a href="#">Delete My Account</a></li>
+                                                                </ul>
+                                                                </div>
+                                                               <li><a href="/internshala/logout">Logout</a></li>
+                                                            </ul>
+                                                            </div>`;
+
+  document.getElementById("moreOptions").addEventListener("click", function () {
+    if (document.getElementById("moreSubMenu").style.display == "none") {
+      document.getElementById("moreSubMenu").style.display = "block";
+      document.querySelector(".subMenuSmall").style.height = "500px";
+      document.querySelector(".first").style.transform = "rotate(270deg)";
+    } else {
+      document.getElementById("moreSubMenu").style.display = "none";
+      document.querySelector(".subMenuSmall").style.height = "420px";
+      document.querySelector(".first").style.transform = "rotate(90deg)";
+    }
+  });
+
+  document
+    .getElementById("manageOptions")
+    .addEventListener("click", function () {
+      if (document.getElementById("manageSubMenu").style.display == "none") {
+        document.getElementById("manageSubMenu").style.display = "block";
+        document.querySelector(".subMenuSmall").style.height = "640px";
+        document.querySelector(".second").style.transform = "rotate(270deg)";
+      } else {
+        document.getElementById("manageSubMenu").style.display = "none";
+        document.querySelector(".subMenuSmall").style.height = "500px";
+        document.querySelector(".second").style.transform = "rotate(90deg)";
+      }
+    });
+
+  document.getElementById("logoutEvent").addEventListener("click", function () {
+    window.location.href = "navBar.html";
+  });
+
+  document.querySelector(".messageImg").onmouseover = () => {
+    let im = document.querySelector(".messageImg");
+
+    im.src = "/images/message_new_hover.svg";
+  };
+
+  document.querySelector(".messageImg").onmouseout = () => {
+    let im = document.querySelector(".messageImg");
+    im.src = "/images/message_new.svg";
+  };
+</script>

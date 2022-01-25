@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Information</title>
+
+    <link rel="stylesheet" href="/css/afterLogin.css">
+
+    <link rel="stylesheet" href="/css/individualJob.css" />
+
+    <link rel="stylesheet" href="/css/footer.css">
+    
+   
+
+    <link rel="stylesheet" href="/css/navBar.css">
+
+    <link rel="icon" href="https://pbs.twimg.com/profile_images/1267326528884375560/GXC-xTlu_400x400.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f1949c3017.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <style>
+    </style> -->
+  </head>
+  <body>
+    <div id="container"></div>
+    <div id="rContainer"> </div>
+    <div id="rfooter"></div>
+  </body>
+</html>
+
+<script type = "module">
+  // let dummyData = {
+  //   title: "Email & Customer Support Executive",
+  //   company: "Stellarr",
+  //   image:
+  //     "https://media-exp1.licdn.com/dms/image/C510BAQFjJUz7izXaKA/company-logo_200_200/0/1552384596729?e=2159024400&v=beta&t=7ouInwoE1iWOvaW-XsuwKF8tywzYYOmQoOz3Q0JgEXk",
+  //   location: ["Bangalore"],
+  //   startDate: "Immediately",
+  //   CTC: "₹ 3 - 3.5 LPA",
+  //   applyBy: "12 Jan' 22",
+  //   jobType: "Fresher Job",
+  //   applicantsCount: "54 applicants",
+  //   aboutCompany:
+  //     "Stellarr is the leading business process outsourcing company offering end-to-end business solutions transforming goals into results. We offer a host of services to manage your business more efficiently. We endeavor to deliver value-added services in customer management, data processing, IT support, infrastructure, and legal to build long-term partnerships with our clients and their end customers. We are providing services like telecom connectivity business solutions, financial services, inbound and outbound call centers, IT solutions, and legal services.",
+  //   keyResponsibility: [
+  //     " Handle queries through emails/calls of a leading SaaS/cloud-based supply chain automation product for the FMCG industry",
+  //     "Address customer issues and resolve them in a timely and efficient manner",
+  //     "Interact with customers on a variety of channels, such as phone and email, and ensure that all valid customer concerns are dealt with immediately",
+  //     "Troubleshoot problems and see them through to resolution",
+  //     "Escalate unresolved issues to the appropriate internal teams",
+  //     "Work on client interaction & handle clients and communicate clients' requirements to internal teams",
+  //     "Coordinate with respective stakeholders and provide technical assistance to clients within SLA",
+  //   ],
+  //   skillsRequired: [
+  //     "Client Relationship",
+  //     "English Proficiency (Spoken)",
+  //     "English Proficiency (Written)",
+  //     "Hindi Proficiency (Spoken)",
+  //   ],
+  //   whoeCanApply: [
+  //     "Science graduates and BCA and MCA preferred",
+  //     "Excellent in English, Hindi, and southern language(all these languages are a must)",
+  //     "Proficiency in Excel is a must",
+  //   ],
+  //   salery: "Annual CTC: ₹ 3 - 3.5 LPA (All fixed)",
+  //   noOfOpenings: "20",
+  // };
+
+  let dummyData = JSON.parse(localStorage.getItem("individualProductItem"));
+
+  // let dummyData = {
+  //   title: "Operations",
+  //   company: "Selltog Online Private Limited",
+  //   imgurl:
+  //     "https://media-exp1.licdn.com/dms/image/C510BAQFjJUz7izXaKA/company-logo_200_200/0/1552384596729?e=2159024400&v=beta&t=7ouInwoE1iWOvaW-XsuwKF8tywzYYOmQoOz3Q0JgEXk",
+  //   location: ["Delhi", "Ghaziabad", "Noida"],
+  //   startDate: "Immediately",
+  //   CTC: "₹ 10000-15000 /month",
+  //   applyBy: "31 Dec' 21",
+  //   jobType: ["Internship", false, 10000, "6", true, true], //Type, PartTime, Min STIPEND, Months, Women, job Offer
+  //   applicantsCount: "12 applicants",
+  //   aboutCompany:
+  //     "We love taking products from vision to reality. Designoweb Technologies is an ISO 9001:2015 Certified company leading the technology development market for the last 4 years. Our 6 Sigma-based process ensures the development of a scalable technology solution for your business. We enhance business value by deploying solutions that are built with proven process methodology offering high-performance business excellence, significantly low costs, and optimizing business operations for your organizational growth. We are pioneers in Saas product development for Web, Android, and iOS. Our technologically advanced team makes sure that no stone is left untouched including blockchain solidity development, IoT Applications, Beacons app development, Token sale platforms, and even ICO marketing.",
+  //   keyResponsibility: [
+  //     "Handle active client contracts",
+  //     "Get weekly feedback and timesheet approvals",
+  //     "Work on invoicing the client",
+  //     "Work on invoicing the vendors",
+  //     "Work on inside sales for further requirements on running clients",
+  //   ],
+  //   skillsRequired: [
+  //     "English Proficiency (Spoken)",
+  //     "English Proficiency (Written)",
+  //     "Hindi Proficiency (Spoken)",
+  //     "Tamil Proficiency (Spoken)",
+  //   ],
+  //   category: ["sales", "business", "Operations"],
+  //   whoeCanApply: [
+  //     "are available for full time (in-office) internship",
+  //     "can start the internship between 17th Dec'21 and 21st Jan'22",
+  //     "are available for duration of 6 months",
+  //     "have relevant skills and interests",
+  //     "Women wanting to start/restart their career can also apply.",
+  //   ],
+  //   salery: null,
+  //   noOfOpenings: "2",
+  // };
+
+  console.log(dummyData);
+
+  localStorage.setItem("searchData", JSON.stringify(dummyData));
+
+  displayData(dummyData);
+
+  function displayData(item) {
+    // console.log(item.title);
+    localStorage.setItem("searchData", JSON.stringify(dummyData));
+    let headTitle = document.createElement("h1");
+    headTitle.textContent = item.title;
+    headTitle.setAttribute("id", "rheadTitle");
+
+    let div = document.createElement("div");
+    div.setAttribute("id", "rContent");
+
+    let title = document.createElement("p");
+    title.textContent = item.title;
+    // title.setAttribute("id", "divTitle")
+
+    let company = document.createElement("p");
+    company.textContent = item.company;
+    company.setAttribute("id", "grey");
+
+    let img = document.createElement("img");
+    img.src = item. imgurl;
+    img.setAttribute("id", "img");
+
+    let locationDiv = document.createElement("div");
+    locationDiv.setAttribute("id", "locDiv");
+
+    let locIcon = document.createElement("div");
+    locIcon.setAttribute("id", "locIcon");
+    locIcon.innerHTML = `<span id = "icon" class="material-icons">location_on</span>`;
+    let location = document.createElement("p");
+    location.innerHTML = item.location;
+    location.setAttribute("id", "location");
+    locationDiv.append(locIcon, location);
+
+    let startDate = document.createElement("p");
+    startDate.innerHTML =
+      `<span id= "iconStart" class="material-icons">play_circle_outline</span>` +
+      "START DATE";
+    startDate.setAttribute("id", "grey1");
+    let date = document.createElement("p");
+    date.textContent = item.startDate;
+    date.setAttribute("id", "date");
+
+    let ctcText = document.createElement("p");
+    ctcText.innerHTML =
+      `<span id= "iconStart" class="material-icons">credit_card</span>` + "CTC";
+    ctcText.setAttribute("id", "grey1");
+    let ctc = document.createElement("p");
+    ctc.textContent = item.CTC;
+
+    let endText = document.createElement("p");
+    endText.innerHTML =
+      `<span id = "iconStart" class="material-icons">hourglass_top</span>` +
+      "Apply By";
+    endText.setAttribute("id", "grey1");
+    let endDate = document.createElement("p");
+    endDate.textContent = item.applyBy;
+
+    let jobType = document.createElement("p");
+    jobType.textContent = item.jobType[0];
+    jobType.setAttribute("id", "jobType");
+
+    let count = document.createElement("p");
+    count.textContent = item.applicantsCount;
+    count.setAttribute("id", "count");
+
+    let line = document.createElement("p");
+    line.setAttribute("id", "line");
+
+    let aboutText = document.createElement("p");
+    aboutText.textContent = "About " + item.company;
+    aboutText.setAttribute("id", "aboutText");
+    let about = document.createElement("p");
+    about.textContent = item.aboutCompany;
+    about.setAttribute("id", "about");
+
+    let responsibilityText = document.createElement("p");
+    responsibilityText.textContent = "About the job";
+    responsibilityText.setAttribute("id", "aboutText");
+    let responsibility = document.createElement("p");
+    responsibility.textContent = item.keyResponsibility;
+    responsibility.setAttribute("id", "about");
+
+    let skillsText = document.createElement("p");
+    skillsText.textContent = "Skill(s) required";
+    skillsText.setAttribute("id", "aboutText");
+
+    let skillsDiv = document.createElement("div");
+    skillsDiv.setAttribute("id", "skillsDiv");
+
+    let x = item.skillsRequired;
+    // console.log(x)
+    // var counts = 0;
+    x.forEach(function (items) {
+      // console.log(counts,items)
+      // counts++
+      let p1 = document.createElement("p");
+      p1.textContent = items;
+      p1.setAttribute("id", "p1");
+      let div = document.createElement("div");
+      div.append(p1);
+      div.setAttribute("id", "skills");
+      skillsDiv.append(div);
+    });
+
+    let canApplyText = document.createElement("p");
+    canApplyText.textContent = "Who can apply";
+    canApplyText.setAttribute("id", "aboutText");
+
+    let canApply = document.createElement("div");
+    // canApply.textContent = item.whoeCanApply;
+    canApply.setAttribute("id", "canApply");
+
+    let canJs = item.whoeCanApply;
+
+    let counts = 1;
+    canJs.forEach(function (item) {
+      console.log(item);
+      let div = document.createElement("div");
+      let p = document.createElement("p");
+      p.textContent = counts + ". " + item;
+      counts++;
+      div.append(p);
+      canApply.append(div);
+    });
+    // console.log(canJs)
+
+    let salaryText = document.createElement("p");
+    salaryText.textContent = "Salary";
+    salaryText.setAttribute("id", "aboutText");
+    let salary = document.createElement("p");
+    salary.textContent = item.salery;
+    salary.setAttribute("id", "salary");
+
+    let openingText = document.createElement("p");
+    openingText.textContent = "Number of openings";
+    openingText.setAttribute("id", "aboutText");
+    let openings = document.createElement("p");
+    openings.textContent = item.noOfOpenings;
+    openings.setAttribute("id", "salary");
+
+    let button = document.createElement("button");
+    button.innerHTML = "Apply now";
+    button.setAttribute("id", "button");
+
+    button.addEventListener("click", resume);
+
+    function resume() {
+      localStorage.setItem("jobData", JSON.stringify(dummyData));
+      window.location.href = "/internshala/products/resumepage";
+    }
+
+    let cont = document.getElementById("rContainer");
+
+    let divTitle = document.createElement("div");
+    // divTitle.setAttribute("id", "rdivTitle");
+    divTitle.setAttribute("id", "divTitle");
+
+    let divTitleText = document.createElement("div");
+    divTitleText.setAttribute("id", "divTitleText");
+
+    let divTitleImg = document.createElement("div");
+    divTitleImg.setAttribute("id", "divTitleImg");
+
+    let divDuration = document.createElement("div");
+    divDuration.setAttribute("id", "divDuration");
+
+    let divStart = document.createElement("div");
+    divStart.setAttribute("id", "divStart");
+
+    let divCtc = document.createElement("div");
+    divCtc.setAttribute("id", "divCtc");
+
+    let divEnd = document.createElement("div");
+    divEnd.setAttribute("id", "divEnd");
+
+    divTitleText.append(title, company);
+    divTitleImg.append(img);
+    divTitle.append(divTitleText, divTitleImg);
+
+    divStart.append(startDate, date);
+    divCtc.append(ctcText, ctc);
+
+    divEnd.append(endText, endDate);
+
+    divDuration.append(divStart, divCtc, divEnd);
+
+    div.append(
+      divTitle,
+      locationDiv,
+      divDuration,
+      jobType,
+      count,
+      line,
+      aboutText,
+      about,
+      responsibilityText,
+      responsibility,
+      skillsText,
+      skillsDiv,
+      canApplyText,
+      canApply,
+      salaryText,
+      salary,
+      openingText,
+      openings,
+      button
+    );
+    cont.append(headTitle, div);
+  }
+
+  let contNav = document.getElementById("container");
+  // import navbar from '/scripts/afterLoginNavbar.js';
+  // console.log(navbar);
+  
+
+  let footerVar = document.getElementById("rfooter");
+  import footer from '/scripts/footer.js';
+  // console.log(footer);
+  footerVar.innerHTML = footer();
+
+  import navBar from "/scripts/afterLoginNavbar.js";
+  import navBarRegistration from "/scripts/navBarforRegistration.js";
+
+  let all = localStorage.getItem("UserDeatils");
+    console.log("indi"+all);
+
+    if (all=="null" || all=="" || all==null) {
+    console.log("Without");
+    contNav.innerHTML = navBarRegistration();
+    document.querySelector(".subMenuSmall").style.height = "150px";
+    document.querySelector(".subMenuSmall").style.width = "200px";
+    document.querySelector(".subMenuSmall").style.marginLeft = "20px";
+  } else {
+    console.log("With");
+    all = JSON.parse(all)
+    contNav.innerHTML = navBar();
+
+  }
+
+
+    let initial = all.first_name;
+  console.log(all.first_name)
+    document.getElementById("userInitial").innerHTML = initial[0].toUpperCase();
+
+
+    document.querySelector(".subMenuSmall").style.height = "420px";
+
+    document.querySelector(".subMenuSmall").style.width = "250px";
+
+    document.querySelector(".subMenuSmall").style.left = "-310%";
+
+
+    document.querySelector(".subMenuSmall").innerHTML = `<li>
+                                                        <div class="nameandMail">
+                                                            <div id="userName">${all.first_name} ${all.last_name}</div>
+                                                        
+                                                            <div>${all.email}</div>    
+                                                        </div>
+                                                           
+                                                        </li>
+                                                         <li class="ratingsDiv">
+                                                            <div style="display:flex , justify-content:center">
+                                                                <i id="starRate" class='bx bxs-star'></i><span style="margin-left:10px">4.1</span>
+                                                            </div>
+                                                            <div style="display:flex">
+                                                                <span>Know More</span><i id="chevronIcon" class='bx bx-chevron-right'></i>
+                                                            </div>
+                                                            </li>
+                                                         <li><a href="#">My Application</a></li>
+                                                         <li><a href="#">Edit Resume</a></li>
+                                                         <li><a href="#">Edit Preferences</a></li>
+                                                         <li><a href="#">Safety Tips</a></li>
+                                                         <li><a href="#">Help Center</a></li>
+                                                         <li>
+                                                            
+                                                            <a id="moreOptions" href="#">More<i id="moreIcon" class='bx bx-chevron-right first'></i></a></li>
+                                                            <div id="moreSubMenu">
+                                                            <ul>
+                                                               <li>
+                                                                <a id="manageOptions" href="#">Manage Account<i id="moreIcon" class='bx bx-chevron-right second'></i></a></li>
+                                                               <div id="manageSubMenu">
+                                                                <ul>
+                                                               <li><a href="#">Change Password</a></li>
+                                                               <li><a href="#">Chnage Email Address</a></li>
+                                                               <li><a href="#">Delete My Account</a></li>
+                                                                </ul>
+                                                                </div>
+                                                               <li><a href="/internshala/logout">Logout</a></li>
+                                                            </ul>
+                                                            </div>`;
+
+    document.getElementById("moreOptions").addEventListener("click",function(){
+        if(document.getElementById("moreSubMenu").style.display == 'none'){
+        document.getElementById("moreSubMenu").style.display = 'block';
+        document.querySelector(".subMenuSmall").style.height = "500px";
+        document.querySelector(".first").style.transform = "rotate(270deg)"
+        }else{
+        document.getElementById("moreSubMenu").style.display = 'none';
+        document.querySelector(".subMenuSmall").style.height = "420px";
+        document.querySelector(".first").style.transform = "rotate(90deg)"
+        }
+    })
+
+    document.getElementById("manageOptions").addEventListener("click",function(){
+        
+        if(document.getElementById("manageSubMenu").style.display == 'none'){
+        document.getElementById("manageSubMenu").style.display = 'block';
+        document.querySelector(".subMenuSmall").style.height = "640px";
+        document.querySelector(".second").style.transform = "rotate(270deg)"
+        }else{
+        document.getElementById("manageSubMenu").style.display = 'none';
+        document.querySelector(".subMenuSmall").style.height = "500px";
+        document.querySelector(".second").style.transform = "rotate(90deg)"
+        }
+    })
+
+    document.getElementById("logoutEvent").addEventListener("click",function(){
+        window.location.href = "navBar.html"
+    })
+
+    
+        
+
+        document.querySelector(".messageImg").onmouseover = () => {
+            let im =  document.querySelector(".messageImg")
+
+            im.src = "/images/message_new_hover.svg"
+        }
+        
+
+         document.querySelector(".messageImg").onmouseout = () => {
+           let im =  document.querySelector(".messageImg")
+            im.src =  "/images/message_new.svg"
+         }
+
+
+
+</script>

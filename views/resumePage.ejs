@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Resume</title>
+    <link rel="icon" href="https://pbs.twimg.com/profile_images/1267326528884375560/GXC-xTlu_400x400.jpg">
+    <script src="https://kit.fontawesome.com/f1949c3017.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/resumePage.css">
+    <!-- <link rel="stylesheet" href="css/resumePage.css"> -->
+    <link rel="stylesheet" href="/css/navBar.css">
+    <link rel="stylesheet" href="/css/afterLogin.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <!-- <style>
+
+
+    </style> -->
+
+      <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+ 
+  </head>
+  <body>
+    <div id="container"></div>
+    <div id="rContainer">
+      <div id="rScript"></div>
+      <form action="/internshala/resume" method="post" enctype="multipart/form-data"> 
+        <h1 id="title">Resume</h1>
+        <div id="rContent">
+          <label for="" id="text">Name:</label>
+          <input type="text" name = "name" id="ninput" placeholder="Enter Name" />
+
+          <label for="" id="text">Mobile No :</label>
+          <input type="number" name = "mobile_no" id="minput" placeholder="Enter Mobile Number" />
+
+          <label for="" id="text">Email:</label>
+          <input type="email" name = "email" id="einput" placeholder="Enter Email Address" />
+  
+          <label for="" id="text">Degree:</label>
+          <input type="text" name = "degree" id="dinput" placeholder="Enter Any Degree" />
+  
+          <label for="" id="text">Passing Year:</label>
+          <input type="date" name = "degree_passing_year" id="painput" />
+  
+          <label for="" id="text">Percentage:</label>
+          <input type="number" name = "degree_percentage" id="peinput" placeholder="Marks %" />
+  
+          <label for="" id="text">Inter/diploma:</label>
+          <input type="text" name = "inter" id="dinput1" placeholder="Enter One" />
+  
+          <label for="" id="text1">Passing Year:</label>
+          <input type="date" name = "inter_passing_year" id="painput1" />
+  
+          <label for="" id="text">Percentage:</label>
+          <input type="number" name = "inter_percentage" id="peinput1" placeholder="Marks %" />
+  
+          <label for="" id="text2">Secondary:</label>
+          <input type="text" name = "secondary" id="dinput2" placeholder="Enter One" />
+  
+          <label for="" id="text">Passing Year:</label>
+          <input type="date" name = "secondary_passing_year" id="painput2" />
+  
+          <label for="" id="text">Percentage:</label>
+          <input type="number" name = "secondary_percentage" id="peinput2" placeholder="Marks %" />
+          <br />
+          <p id="pTag">Or</p>
+          <label for="file-uload" id="uploadText">Upload Resume(Pdf,doc):</label>
+          <input type="file" name = "resume_file" accept="application/pdf,application/vnd.ms-excel" id="upload" />
+          <br>
+          <label for="" id="submitText">Press submit and to proeced</label>
+          <input type="submit" value = "Submit" id="submitInput">
+        </div>
+      </div>
+      </form>
+      
+    <div id="rfooter"></div>
+  </body>
+</html>
+
+<script type = "module">
+    let jobData = {
+    title: "Operations",
+    company: "Selltog Online Private Limited",
+    imgurl:
+      "https://media-exp1.licdn.com/dms/image/C510BAQFjJUz7izXaKA/company-logo_200_200/0/1552384596729?e=2159024400&v=beta&t=7ouInwoE1iWOvaW-XsuwKF8tywzYYOmQoOz3Q0JgEXk",
+    location: ["Delhi", "Ghaziabad", "Noida"],
+    startDate: "Immediately",
+    CTC: "₹ 10000-15000 /month",
+    applyBy: "31 Dec' 21",
+    jobType: ["Internship", false, 10000, "6", true, true], //Type, PartTime, Min STIPEND, Months, Women, job Offer
+    applicantsCount: "12 applicants",
+    aboutCompany:
+      "We love taking products from vision to reality. Designoweb Technologies is an ISO 9001:2015 Certified company leading the technology development market for the last 4 years. Our 6 Sigma-based process ensures the development of a scalable technology solution for your business. We enhance business value by deploying solutions that are built with proven process methodology offering high-performance business excellence, significantly low costs, and optimizing business operations for your organizational growth. We are pioneers in Saas product development for Web, Android, and iOS. Our technologically advanced team makes sure that no stone is left untouched including blockchain solidity development, IoT Applications, Beacons app development, Token sale platforms, and even ICO marketing.",
+    keyResponsibility: [
+      "Handle active client contracts",
+      "Get weekly feedback and timesheet approvals",
+      "Work on invoicing the client",
+      "Work on invoicing the vendors",
+      "Work on inside sales for further requirements on running clients",
+    ],
+    skillsRequired: [
+      "English Proficiency (Spoken)",
+      "English Proficiency (Written)",
+      "Hindi Proficiency (Spoken)",
+      "Tamil Proficiency (Spoken)",
+    ],
+    category: ["sales", "business", "Operations"],
+    whoeCanApply: [
+      "are available for full time (in-office) internship",
+      "can start the internship between 17th Dec'21 and 21st Jan'22",
+      "are available for duration of 6 months",
+      "have relevant skills and interests",
+      "Women wanting to start/restart their career can also apply.",
+    ],
+    salery: null,
+    noOfOpenings: "2",
+  };
+//   var jobData = JSON.parse(localStorage.getItem("jobData"));
+  console.log(jobData);
+
+  let leftDiv = document.createElement("div");
+  leftDiv.setAttribute("id", "leftDiv");
+  let rightDiv = document.createElement("div");
+  rightDiv.setAttribute("id", "rightDiv");
+
+  let spans = document.createElement("div");
+  spans.setAttribute("id", "iconss");
+  spans.innerHTML = `<span class="material-icons-outlined">info</span>`;
+
+  `<span class="material-icons-outlined">info</span>`;
+  let titles = document.createElement("p");
+  titles.innerHTML =
+    "Applying at " +
+    jobData.title +
+    "in multiple locations at " +
+    jobData.company;
+  titles.setAttribute("id", "titles");
+
+  let para = document.createElement("p");
+  para.textContent =
+    "This is the resume that the employer will see, make sure it is up to date. You can add or edit details below.";
+  para.setAttribute("id", "para");
+
+  let button = document.createElement("button");
+  button.innerHTML = "Proceed to application";
+  button.setAttribute("id", "button");
+  button.addEventListener("click", storeResume);
+
+  let cont = document.getElementById("rScript");
+
+  leftDiv.append(titles, para);
+  rightDiv.append(button);
+
+  cont.append(spans, leftDiv, rightDiv);
+
+  function storeResume() {
+    let inputN = document.getElementById("ninput").value;
+    let inputE = document.getElementById("einput").value;
+    let inputM = document.getElementById("minput").value;
+    let inputD = document.getElementById("dinput").value;
+    let inputPA = document.getElementById("painput").value;
+    let inputPE = document.getElementById("peinput").value;
+    let inputD1 = document.getElementById("dinput1").value;
+    let inputD2 = document.getElementById("dinput2").value;
+    let inputPA1 = document.getElementById("painput1").value;
+    let inputPE1 = document.getElementById("peinput1").value;
+    let inputPA2 = document.getElementById("painput2").value;
+    let inputPE2 = document.getElementById("peinput2").value;
+
+    
+    let pdf = document.getElementById("upload").value;
+    if (pdf == "") {
+      let count = 0;
+      if (inputN === "") {
+        let inputN = document.getElementById("ninput");
+        inputN.placeholder = "Ⓘ This field required";
+        inputN.setAttribute("id", "emptyN");
+        count++;
+      }
+      if (inputM == "") {
+        let inputM = document.getElementById("minput");
+        inputM.placeholder = "Ⓘ This field required";
+        inputM.setAttribute("id", "emptyM");
+        count++;
+      }
+      if (inputE === "") {
+        let inputE = document.getElementById("einput");
+        inputE.placeholder = "Ⓘ This field required";
+        inputE.setAttribute("id", "emptyE");
+        count++;
+      }
+      if (inputD === "") {
+        let inputD = document.getElementById("dinput");
+        inputD.placeholder = "Ⓘ This field required";
+        inputD.setAttribute("id", "emptyD");
+        count++;
+      }
+      if (inputPA === "") {
+        let inputPA = document.getElementById("painput");
+        // inputPA.placeholder = "Ⓘ This field required";
+        inputPA.setAttribute("id", "emptyPA");
+        count++;
+      }
+      if (inputPE === "") {
+        let inputPE = document.getElementById("peinput");
+        inputPE.placeholder = "Ⓘ Required";
+        inputPE.setAttribute("id", "emptyPE");
+        count++;
+      }
+      if (inputD1 === "") {
+        let inputD1 = document.getElementById("dinput1");
+        inputD1.placeholder = "Ⓘ This field required";
+        inputD1.setAttribute("id", "emptyD1");
+        count++;
+      }
+      if (inputD2 === "") {
+        let inputD2 = document.getElementById("dinput2");
+        inputD2.placeholder = "Ⓘ This field required";
+        inputD2.setAttribute("id", "emptyD2");
+        count++;
+      }
+      if (inputPA1 === "") {
+        let inputPA1 = document.getElementById("painput1");
+        // inputPA1.placeholder = "Ⓘ This field required";
+        inputPA1.setAttribute("id", "emptyPA1");
+        count++;
+      }
+      if (inputPE1 === "") {
+        let inputPE1 = document.getElementById("peinput1");
+        inputPE1.placeholder = "Ⓘ Required";
+        inputPE1.setAttribute("id", "emptyPE1");
+        count++;
+      }
+      if (inputPA2 === "") {
+        let inputPA2 = document.getElementById("painput2");
+        // inputPA2.placeholder = "Ⓘ This field required";
+        inputPA2.setAttribute("id", "emptyPA2");
+        count++;
+      }
+      if (inputPE2 === "") {
+        let inputPE2 = document.getElementById("peinput2");
+        inputPE2.placeholder = "Ⓘ Required";
+        inputPE2.setAttribute("id", "emptyPE2");
+        count++;
+      }
+     
+      console.log(count)
+      if(count > 1){
+      alert("All fields required to continue")
+      }
+      else{
+        window.location.href = ("coverPage")
+      }
+      console.log("count")
+    }
+    else{
+      window.location.href = "/internshala/coverPage"
+    }
+
+    console.log(count)
+    let warn = document.createElement("h3");
+    warn.textContent = "All fields are required to continue"
+
+    let data = {
+      name: inputN,
+      email: inputE,
+      mobile: inputM,
+      degree: inputD,
+      passing_year: inputPA,
+      percentage: inputPE,
+    };
+    console.log(data);
+    localStorage.setItem("resumeData", JSON.stringify(data));
+
+
+    
+  }
+
+  let contNav = document.getElementById("container");
+  import navbar from '/scripts/afterLoginNavbar.js';
+  console.log(navbar);
+  contNav.innerHTML = navbar()
+
+  let footerVar = document.getElementById("rfooter");
+  import footer from '/scripts/footer.js';
+  // console.log(footer);
+  footerVar.innerHTML = footer()
+
+  let all = JSON.parse(localStorage.getItem("UserDeatils"));
+    console.log("all",all);
+
+    if (all!==null){
+      console.log("asd")
+    let initial = all.first_name;
+
+    document.getElementById("userInitial").innerHTML = initial[0].toUpperCase();
+
+
+    document.querySelector(".subMenuSmall").style.height = "420px";
+
+    document.querySelector(".subMenuSmall").style.width = "250px";
+
+    document.querySelector(".subMenuSmall").style.left = "-310%";
+
+
+    document.querySelector(".subMenuSmall").innerHTML = `<li>
+                                                        <div class="nameandMail">
+                                                            <div id="userName">${all.first_name} ${all.last_name}</div>
+                                                        
+                                                            <div>${all.email}</div>    
+                                                        </div>
+                                                           
+                                                        </li>
+                                                         <li class="ratingsDiv">
+                                                            <div style="display:flex , justify-content:center">
+                                                                <i id="starRate" class='bx bxs-star'></i><span style="margin-left:10px">4.1</span>
+                                                            </div>
+                                                            <div style="display:flex">
+                                                                <span>Know More</span><i id="chevronIcon" class='bx bx-chevron-right'></i>
+                                                            </div>
+                                                            </li>
+                                                         <li><a href="#">My Application</a></li>
+                                                         <li><a href="#">Edit Resume</a></li>
+                                                         <li><a href="#">Edit Preferences</a></li>
+                                                         <li><a href="#">Safety Tips</a></li>
+                                                         <li><a href="#">Help Center</a></li>
+                                                         <li>
+                                                            
+                                                            <a id="moreOptions" href="#">More<i id="moreIcon" class='bx bx-chevron-right first'></i></a></li>
+                                                            <div id="moreSubMenu">
+                                                            <ul>
+                                                               <li>
+                                                                <a id="manageOptions" href="#">Manage Account<i id="moreIcon" class='bx bx-chevron-right second'></i></a></li>
+                                                               <div id="manageSubMenu">
+                                                                <ul>
+                                                               <li><a href="#">Change Password</a></li>
+                                                               <li><a href="#">Chnage Email Address</a></li>
+                                                               <li><a href="#">Delete My Account</a></li>
+                                                                </ul>
+                                                                </div>
+                                                               <li><a href="/internshala/logout">Logout</a></li>
+                                                            </ul>
+                                                            </div>`;
+
+    document.getElementById("moreOptions").addEventListener("click",function(){
+        if(document.getElementById("moreSubMenu").style.display == 'none'){
+        document.getElementById("moreSubMenu").style.display = 'block';
+        document.querySelector(".subMenuSmall").style.height = "500px";
+        document.querySelector(".first").style.transform = "rotate(270deg)"
+        }else{
+        document.getElementById("moreSubMenu").style.display = 'none';
+        document.querySelector(".subMenuSmall").style.height = "420px";
+        document.querySelector(".first").style.transform = "rotate(90deg)"
+        }
+    })
+
+    document.getElementById("manageOptions").addEventListener("click",function(){
+        
+        if(document.getElementById("manageSubMenu").style.display == 'none'){
+        document.getElementById("manageSubMenu").style.display = 'block';
+        document.querySelector(".subMenuSmall").style.height = "640px";
+        document.querySelector(".second").style.transform = "rotate(270deg)"
+        }else{
+        document.getElementById("manageSubMenu").style.display = 'none';
+        document.querySelector(".subMenuSmall").style.height = "500px";
+        document.querySelector(".second").style.transform = "rotate(90deg)"
+        }
+    })
+
+        document.querySelector(".messageImg").onmouseover = () => {
+            let im =  document.querySelector(".messageImg")
+
+            im.src = "/images/message_new_hover.svg"
+        }
+        
+
+         document.querySelector(".messageImg").onmouseout = () => {
+           let im =  document.querySelector(".messageImg")
+            im.src =  "/images/message_new.svg"
+         }
+        }
+</script>

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<style></style>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <link
+      rel="icon"
+      href="https://pbs.twimg.com/profile_images/1267326528884375560/GXC-xTlu_400x400.jpg"
+    />
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/css/loginpage.css" /> 
+    <link rel="stylesheet" href="/css/afterLogin.css">
+    <link rel="stylesheet" href="/css/navBar.css" /> 
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/modifiedNav.css">
+    <link rel="stylesheet" href="/css/productPage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/navBar.css" /> -->
+    <script src="https://kit.fontawesome.com/bb916d5bed.js" crossorigin="anonymous"></script>
+
+    <style>
+      .nameandMail {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        padding-top: 5%;
+        line-height: 23px;
+      }
+
+      .messageDiv:hover .messageImg {
+        background-image: url(./images/message_new_hover.svg);
+      }
+      #userName {
+        font-weight: 600;
+        font-size: 14.5px;
+      }
+      .ratingsDiv {
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-between;
+        border: 1px solid lightgray;
+        height: 60px;
+        border-left: none;
+        border-right: none;
+      }
+      .ratingsDiv:hover {
+        color: #00a5ec;
+      }
+      #starRate {
+        font-size: 15px;
+        color: #ffc107;
+      }
+      #chevronIcon {
+        margin-left: -5px;
+        font-size: 30px;
+        font-weight: 100;
+      }
+      #moreOptions {
+        display: flex;
+        width: 100%;
+        /* position: absolute; */
+        justify-content: space-between;
+      }
+      #manageOptions {
+        display: flex;
+        width: 100%;
+        /* position: absolute; */
+        justify-content: space-between;
+      }
+      #moreIcon {
+        font-size: 30px;
+        transform: rotate(90deg);
+      }
+      #moreSubMenu {
+        background-color: #fff;
+        border-top: none;
+        display: none;
+        margin-left: 20px;
+      }
+      #manageSubMenu {
+        background-color: #fff;
+        border-top: none;
+        display: none;
+        margin-left: 40px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="navBar"></div>
+    <div id="mainBody">
+      <div id="mainContainer">
+        <div id="leftContainer">
+          <p id="filterHead" style="margin-bottom: 20px; margin-top: 10px">
+            <i class="bx bx-filter-alt" style="margin-right: 5px; color: #00a5ec"></i>Filters
+          </p>
+          <div id="preferenceCheck">
+            <input style="margin-top: 0;" type="checkbox" id="matchingPreferenceJob" />
+            <p>
+              Show opportunities as per my
+              <span style="color: #008bdc; font-weight: 500">preferences</span>
+            </p>
+          </div>
+          <div id="categoryInput">
+            <label for="category">Category</label><br />
+            <input type="text" id="category" placeholder="e.g. Marketing" />
+          </div>
+          <div id="locationInput">
+            <label for="location">Location</label><br />
+            <input type="text" id="location" placeholder="e.g. New Delhi" />
+          </div>
+          <div id="slideRemote" style="margin-top: 20px">
+            <label>Remote jobs</label>
+            <div class="slideDiv" id="slideDiv1">
+              <div class="line1"></div>
+              <div class="circle1"></div>
+            </div>
+          </div>
+          <div id="slideIncludeIntern">
+            <label>Also include internships</label>
+            <div class="slideDiv" id="slideDiv2">
+              <div class="line2"></div>
+              <div class="circle2"></div>
+            </div>
+          </div>
+          <div id="resetLinkDiv" style="margin-top: 40px; margin-bottom: 30px; font-size: 16px">
+            <h4 style="text-align: right"><a href="" id="resetLink">Clear All</a></h4>
+          </div>
+          <div>
+            <div style="display: flex">
+              <h4
+                style="
+                  margin: auto;
+                  background-color: white;
+                  display: block;
+                  padding: 0px 10px;
+                  z-index: 1;
+                  color: #888;
+                  font-size: 15px;
+                "
+              >
+                OR
+              </h4>
+            </div>
+            <div
+              style="
+                border-top: 1px solid rgb(184, 183, 183);
+                width: 80%;
+                margin: auto;
+                margin-top: -10px;
+                position: relative;
+              "
+            ></div>
+          </div>
+          <p id="filterHead" style="margin-top: 30px; margin-bottom: 20px">Search</p>
+          <div id="uniSearchDiv">
+            <input type="text" placeholder="e.g. Design, Mumbai, Masai" id="uniSearch" />
+            <button id="uniSearchB" style="height: 35px; margin-top: 30px;"><i class="fas fa-search" style="color: white; "></i></button>
+          </div>
+        </div>
+
+        <div id="rightContainer"></div>
+      </div>
+    </div>
+    <div id="footerDiv"></div>
+  </body>
+</html>
+<script type="module">
+  let dummyData = JSON.parse('<%-dummyData%>');
+  console.log(dummyData);
+  let oriData = [...dummyData];
+  dummyData = oriData.filter((i) => i.jobType[0] !== "Internship");
+
+  // import appendProducts from "./scripts/appendProducts.js";
+  import footer from "/scripts/footer.js";
+  // import navBar from "./landing Page/scripts/afterLoginNavbar.js";
+
+  // document.getElementById("navBar").innerHTML = navBar();
+
+  document.getElementById("footerDiv").innerHTML = footer();
+  // *****
+  import navBar from "/scripts/afterLoginNavbar.js";
+  import navBarRegistration from "/scripts/navBarforRegistration.js";
+
+  let all = '<%-user%>' || "";
+  console.log(all)
+  // console.log(JSON.parse(all))
+  if(!all){
+    all = JSON.parse(localStorage.getItem("interPage"))
+  }else{
+    all = JSON.parse('<%-user%>');
+  }
+  if (!all) {
+    console.log("Without");
+    document.getElementById("navBar").innerHTML = navBarRegistration();
+    document.querySelector(".subMenuSmall").style.height = "150px";
+    document.querySelector(".subMenuSmall").style.width = "200px";
+    document.querySelector(".subMenuSmall").style.marginLeft = "20px";
+  } else {
+    // all = JSON.parse('<%-user%>');
+    console.log("With");
+    document.getElementById("navBar").innerHTML = navBar();
+  }
+// ****
+
+  localStorage.setItem("UserDeatils",JSON.stringify(all))
+
+  let location = document.getElementById("rightContainer");
+
+  function appendProducts(data, location) {
+    location.innerHTML = "";
+
+    var n;
+    if (data.length === 0) n = `No Items Available`;
+    else n = `${data.length} Items are available for your Query`;
+    let h1 = document.createElement("p");
+    h1.textContent = n;
+    h1.style.textAlign = "center";
+    h1.style.fontSize = "20px";
+    h1.style.fontWeight = "600";
+    h1.style.marginBottom = "20px";
+    location.append(h1);
+
+    data.forEach((item) => {
+      if (item.jobType[0] == "Internship") {
+        var abc = `<div class="detailsDiv"><p id="ctc1">
+      <i class="fas fa-money-bill-alt" style="margin-right: 10px;"></i>STIPEND
+    </p>
+    <p id="ctc2">${item.CTC}</p></div><div class="detailsDiv" style="margin-left:30px"><p id="ctc1">
+    <i class="fas fa-money-bill-alt" style="margin-right: 10px;"></i>DURATION
+  </p>
+  <p id="ctc2">${item.jobType[3] + " MONTHS"}</p></div>`;
+      } else {
+        var abc = `<div class="detailsDiv"><p id="ctc1">
+          <i class="fas fa-money-bill-alt" style="margin-right: 10px;"></i>CTC
+        </p>
+        <p id="ctc2">${item.CTC}</p></div>`;
+      }
+
+      var a = `<div id="card">
+    <div id="cardHeading">
+    <div><p id="title">${item.title}</p>
+    <p id="brand">${item.company}</p></div>
+
+    <img src="${item.imgurl}" alt="" style="width:55px;height:55px">
+      
+    </div>
+
+    <p id="location">
+      <i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i>${item.location}
+    </p>
+
+    <div id="cardDetails">
+      <div class="detailsDiv">
+        <p id="startD1">
+          <i class="far fa-play-circle" style="margin-right: 10px;"></i>START DATE
+        </p>
+        <p  id="startD2">${item.startDate}</p>
+      </div>
+      
+        ${abc}
+        
+      
+      <div class="detailsDiv">
+        <p id="applyBy1">
+          <i class="fas fa-hourglass-end" style="margin-right: 10px;"></i>APPLY BY
+        </p>
+        <p id="applyBy2">${item.applyBy}</p>
+      </div>
+    </div>
+
+    <div id="cardFooter">
+      <div id="type">${item.jobType[0]}</div>
+      <div id="viewDetailsLink">View Details >></div>
+    </div>
+  </div>`;
+      let div = document.createElement("div");
+      div.addEventListener("click", (e) => {
+        localStorage.setItem("individualProductItem", JSON.stringify(item));
+        window.location.href = "individualJob";
+      });
+      // console.log('a:', a)
+      div.innerHTML = a;
+
+      location.append(div);
+    });
+  }
+
+  appendProducts(dummyData, location);
+
+  let slideClicked1 = false;
+  let slideClicked2 = false;
+
+  document.getElementById("slideDiv2").addEventListener("click", () => {
+    slideClicked2 = ~slideClicked2;
+    if (slideClicked2) {
+      document.querySelector(".line2").style.backgroundColor = "#8FEAFE";
+      document.querySelector(".circle2").style.backgroundColor = "#006BC2";
+      document.querySelector(".circle2").style.left = "12px";
+      dummyData = oriData;
+      appendProducts(dummyData, location);
+    } else {
+      document.querySelector(".line2").style.backgroundColor = "#b2b2b2";
+      document.querySelector(".circle2").style.backgroundColor = "#666";
+      document.querySelector(".circle2").style.left = "-3px";
+      dummyData = oriData.filter((i) => i.jobType[0] !== "Internship");
+      appendProducts(dummyData, location);
+    }
+  });
+
+  document.getElementById("slideDiv1").addEventListener("click", () => {
+    slideClicked1 = ~slideClicked1;
+
+    if (slideClicked1) {
+      document.querySelector(".line1").style.backgroundColor = "#8FEAFE";
+      document.querySelector(".circle1").style.backgroundColor = "#006BC2";
+      document.querySelector(".circle1").style.left = "12px";
+      dummyData = dummyData.filter((a) => a.location.includes("Remote"));
+      appendProducts(dummyData, location);
+    } else {
+      document.querySelector(".line1").style.backgroundColor = "#b2b2b2";
+      document.querySelector(".circle1").style.backgroundColor = "#666";
+      document.querySelector(".circle1").style.left = "-3px";
+      dummyData = oriData;
+      appendProducts(dummyData, location);
+    }
+  });
+
+  document.getElementById("location").addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      let city = document.getElementById("location").value;
+      console.log("city:", city);
+      var fData = dummyData.filter((item) => {
+        for (var i = 0; i < item.location.length; i++) {
+          if (item.location[i].toLowerCase().includes(city.toLowerCase())) return true;
+        }
+        return false;
+      });
+      appendProducts(fData, location);
+    }
+  });
+
+  document.getElementById("category").addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      let city = document.getElementById("category").value;
+      console.log("city:", city);
+      var fData = dummyData.filter((item) => {
+        for (var i = 0; i < item.category.length; i++) {
+          if (item.category[i].toLowerCase().includes(city.toLowerCase())) return true;
+        }
+        return false;
+      });
+      console.log("fData:", fData);
+      appendProducts(fData, location);
+    }
+  });
+
+  document.getElementById("uniSearch").addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      let city = document.getElementById("uniSearch").value;
+      console.log("city:", city);
+      var fData = dummyData.filter((item) => {
+        for (var i = 0; i < item.category.length; i++) {
+          if (item.category[i].toLowerCase().includes(city.toLowerCase())) return true;
+        }
+        for (var i = 0; i < item.location.length; i++) {
+          if (item.location[i].toLowerCase().includes(city.toLowerCase())) return true;
+        }
+        return false;
+      });
+      console.log("fData:", fData);
+      appendProducts(fData, location);
+    }
+  });
+
+
+
+ 
+
+  // *****
+  if (all) {
+    let initial = all.first_name;
+
+    console.log(initial);
+    
+
+    document.getElementById("userInitial").innerHTML = initial[0].toUpperCase();
+
+    document.querySelector(".subMenuSmall").style.height = "420px";
+
+    document.querySelector(".subMenuSmall").style.width = "250px";
+
+    document.querySelector(".subMenuSmall").style.left = "-310%";
+
+    document.querySelector(".subMenuSmall").innerHTML = `<li>
+                                                        <div class="nameandMail">
+                                                            <div id="userName">${all.first_name} ${all.last_name}</div>
+                                                        
+                                                            <div>${all.email}</div>    
+                                                        </div>
+                                                           
+                                                        </li>
+                                                         <li class="ratingsDiv">
+                                                            <div style="display:flex , justify-content:center">
+                                                                <i id="starRate" class='bx bxs-star'></i><span style="margin-left:10px">4.1</span>
+                                                            </div>
+                                                            <div style="display:flex">
+                                                                <span>Know More</span><i id="chevronIcon" class='bx bx-chevron-right'></i>
+                                                            </div>
+                                                            </li>
+                                                         <li><a href="#">My Application</a></li>
+                                                         <li><a href="#">Edit Resume</a></li>
+                                                         <li><a href="#">Edit Preferences</a></li>
+                                                         <li><a href="#">Safety Tips</a></li>
+                                                         <li><a href="#">Help Center</a></li>
+                                                         <li>
+                                                            
+                                                            <a id="moreOptions" href="#">More<i id="moreIcon" class='bx bx-chevron-right first'></i></a></li>
+                                                            <div id="moreSubMenu">
+                                                            <ul>
+                                                               <li>
+                                                                <a id="manageOptions" href="#">Manage Account<i id="moreIcon" class='bx bx-chevron-right second'></i></a></li>
+                                                               <div id="manageSubMenu">
+                                                                <ul>
+                                                               <li><a href="#">Change Password</a></li>
+                                                               <li><a href="#">Chnage Email Address</a></li>
+                                                               <li><a href="#">Delete My Account</a></li>
+                                                                </ul>
+                                                                </div>
+                                                               <li ><a href="/internshala/logout">Logout</a></li>
+                                                            </ul>
+                                                            </div>`;
+
+    document
+      .getElementById("moreOptions")
+      .addEventListener("click", function () {
+        if (document.getElementById("moreSubMenu").style.display == "none") {
+          document.getElementById("moreSubMenu").style.display = "block";
+          document.querySelector(".subMenuSmall").style.height = "510px";
+          document.querySelector(".first").style.transform = "rotate(270deg)";
+        } else {
+          document.getElementById("moreSubMenu").style.display = "none";
+          document.querySelector(".subMenuSmall").style.height = "420px";
+          document.querySelector(".first").style.transform = "rotate(90deg)";
+        }
+      });
+
+    document
+      .getElementById("manageOptions")
+      .addEventListener("click", function () {
+        if (document.getElementById("manageSubMenu").style.display == "none") {
+          document.getElementById("manageSubMenu").style.display = "block";
+          document.querySelector(".subMenuSmall").style.height = "650px";
+          document.querySelector(".second").style.transform = "rotate(270deg)";
+        } else {
+          document.getElementById("manageSubMenu").style.display = "none";
+          document.querySelector(".subMenuSmall").style.height = "500px";
+          document.querySelector(".second").style.transform = "rotate(90deg)";
+        }
+      });
+
+
+    document.querySelector(".messageImg").onmouseover = () => {
+      let im = document.querySelector(".messageImg");
+
+      im.src = "/images/message_new_hover.svg";
+    };
+
+    document.querySelector(".messageImg").onmouseout = () => {
+      let im = document.querySelector(".messageImg");
+      im.src = "/images/message_new.svg";
+    };
+  }
+// *****
+import loginPage from "/scripts/loginPage.js";
+  if(!all){
+
+    document.getElementById("login-page").innerHTML = loginPage();
+  }
+
+  document
+    .getElementById("loginPagebetween")
+    .addEventListener("click", function () {
+      document.querySelector("#mainPageModel").style.display = "flex";
+      document.getElementById("navContainer").style.zIndex = "0";
+    });
+
+  document.querySelector(".close").addEventListener("click", function () {
+    document.querySelector("#mainPageModel").style.display = "none";
+    document.getElementById("navContainer").style.zIndex = "100";
+  });
+
+  document
+    .querySelector(".employerLogin")
+    .addEventListener("click", function () {
+      document.querySelector("#employerName").style.color = "#007bff";
+      document.querySelector(".employerLogin").style.border =
+        "2px solid #007bff";
+      document.querySelector(".employerLogin").style.borderLeft = "none";
+      document.querySelector(".employerLogin").style.borderRight = "none";
+      document.querySelector(".employerLogin").style.borderTop = "none";
+
+      document.querySelector(".studentLogin").style.border = "none";
+      document.querySelector("#studentName").style.color = "black";
+
+      document.querySelector(".forOr").style.display = "none";
+      document.querySelector(".forGoogle").style.display = "none";
+
+      document.querySelector(".mainContent").style.height = "400px";
+      document.querySelector(".inputModel").style.marginTop = "-16%";
+    });
+
+  document
+    .querySelector(".studentLogin")
+    .addEventListener("click", function () {
+      document.querySelector("#studentName").style.color = "#007bff";
+      document.querySelector(".studentLogin").style.border =
+        "2px solid #007bff";
+      document.querySelector(".studentLogin").style.borderLeft = "none";
+      document.querySelector(".studentLogin").style.borderRight = "none";
+      document.querySelector(".studentLogin").style.borderTop = "none";
+
+      document.querySelector(".employerLogin").style.border = "none";
+      document.querySelector("#employerName").style.color = "black";
+
+      document.querySelector(".forOr").style.display = "flex";
+      document.querySelector(".forGoogle").style.display = "flex";
+
+      document.querySelector(".mainContent").style.height = "500px";
+      document.querySelector(".inputModel").style.marginTop = "6%";
+    });
+
+  document
+    .querySelector("#buttonLogin")
+    .addEventListener("click", function (event) {
+      event.preventDefault();
+      let email = document.getElementById("emailLogin").value;
+
+      let passWord = document.getElementById("passwordLogin").value;
+      let emailFlag = false;
+      let passFlag = false;
+      let details = null;
+      usersData.map((item) => {
+        if (email == item.email) {
+          emailFlag = true;
+          details = item;
+        }
+        if (passWord == item.password) {
+          passFlag = true;
+          details = item;
+        }
+      });
+
+      if (emailFlag == false && passFlag == true) {
+        document.getElementById("emailMessage").style.display = "block";
+
+        document.getElementById(
+          "emailNameAlert"
+        ).innerHTML = `<p id="emailNameAlert"><img id="alertImg" src="/images/alert.png">Please enter a valid email address</p>`;
+      } else if (passFlag == false && emailFlag == true) {
+        document.getElementById("passMessage").style.display = "block";
+        document.getElementById(
+          "passNameAlert"
+        ).innerHTML = `<p id="passNameAlert"><img id="alertImg" src="/images/alert.png">Please enter a valid password</p>`;
+      }
+
+      if (emailFlag && passFlag) {
+        localStorage.setItem("singleUserLoginDetails", JSON.stringify(details));
+
+        window.location.href = "../productPage.html";
+      }
+    });
+
+
+  function theFunction(){
+    console.log("logout Clicked")
+    localStorage.removeItem("interPage");
+    window.location.href = "/internshala/logout"
+  }
+
+  // *****
+</script>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/navBar.css">
+    <link rel="stylesheet" href="/css/loginPage.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <title>Students Login</title>
+    <link rel="icon" href="https://pbs.twimg.com/profile_images/1267326528884375560/GXC-xTlu_400x400.jpg">
+    <style>
+        .studentLoginPage{
+            width: 100%;
+            height: 100%;
+            background-image: url("/images/studentLoginImage.jpg");
+            background-size: cover;
+            display: flex;
+            margin-top: 75px;
+            justify-content: space-between;
+        }
+        .freeRide{
+            height: 400px;
+            margin-top: 3%;
+            width: 550px;
+            margin-left: 2%;
+            color: #172727
+        }
+        .forOrRegister{
+            display: flex;
+            margin-top: 20px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: -20px;
+            font-size: 12px;
+        }
+        .orBrforeRegister{
+            border: 1px solid lightgray;
+            width: 36%;
+            height: 1px;
+            margin-left: 7.5%;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            margin-right: 10px;
+        }
+        .orAfterRegister{
+            border: 1px solid lightgray;
+            width: 36%;
+            height: 1px;
+            margin-left: 10px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            margin-right: 7.5%;
+        }
+        .forSignup{
+            /* border: 1px solid black; */
+            height: 470px;
+            margin-top: 3%;
+            width: 350px;
+            margin-right: 30px;
+            background-color: #fff;
+            color: #172727;
+            box-shadow: 0 8px 16px rgb(0 0 0 / 8%) ;
+        }
+        input[type=email]:focus,input[type=password]:focus {
+            border: 1px solid rgb(0,100,209);
+            outline: none;
+          }
+        input:hover{
+            border: 1px solid rgb(0,100,209);
+        }
+        .forGoogleRegister{
+            margin-top: 15%;
+            width: 95%;
+            margin-left: 8%;
+            height: 40px;
+            font-weight: 600;
+        }
+        .forGoogleClick{
+            border-radius: 3px;
+            width: 88%;
+        }
+        
+        .inputsRegister{
+            border: 1px solid lightgray;
+            width: 90%;
+            height: 40px;
+            margin-top: 10px;
+            margin-left: 2%;
+            margin-bottom: 0;
+        }
+        .inputModelRegister{
+            width: 95%;
+            display: flex;
+            margin-top: 6%;
+            margin-left: 5%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .emailRegister, .passRegister{
+            margin-left: 2%;
+            margin-top: 6%;
+            line-height: 12px;
+            font-weight: 600;
+        }
+        .forNameFull{
+            width: 95%;
+            display: flex;
+            margin-top: 5%;
+            margin-left: 2%;
+            font-weight: 600;
+        }
+        .forLastName,.forFirstName{
+            height: 40px;
+            width: 90%;
+            margin-top: 5%;
+            border: 1px solid lightgray;
+        }
+        input { 
+            border-radius: 3px;
+            border: 1px solid #f9f9f9;
+        }
+        
+        .termsConditionRegister{
+            width: 92%;
+            margin-left: 2%;
+            margin-top: 3%;
+        }
+        .termsConditionRegister a{
+            font-size: 11.5px;
+        }
+        .signupButtonRegister:hover{
+            background-color: #0089EC;
+            cursor: pointer;
+            transition: .5s;
+        }
+        .signupButtonRegister{
+            width: 90%;
+            height: 40px;
+            margin-left: 2%;
+            margin-top: 3%;
+            background-color: #00A5EC;
+            border-radius: 3px;
+            border: none;
+            color: white;
+            font-weight: 600;
+        }
+        .newUser .newUserRegister{
+            font-size: 14px;
+            margin-top: -5px;
+        }
+        #registerContentFree p{
+            font-size: 28px;
+            font-weight: 700;
+            
+        }
+
+        #email,#password{
+            margin-top: 10px;
+        }
+        .freeBackround{
+            height: 44px;
+            width: 96px;
+            padding: 2px 16px;
+            display: inline-block;
+            margin-left: -3px;
+            margin-right: -6px;
+            background-image: url("/images/brush_stroke.svg");
+            background-size: contain;
+            vertical-align: middle;
+            box-sizing: border-box;
+            color: #fff;
+        }
+        .studentLoginPage .freeRide .Registeropportunities p{
+            font-size: 24px;
+            margin-top: 3%;
+            font-weight: 600;
+        }
+        .studentLoginPage .freeRide .checkBoxes{
+            display: flex;
+            flex-direction: column;
+            margin-top: 3%;
+        }
+        .studentLoginPage .freeRide .checkBoxes div p{
+            display: flex;
+            font-size: 18px;
+            width: 300px;
+            align-items: center;
+            margin-top: 1%;
+            font-weight: 600;
+        }
+        .studentLoginPage .freeRide .checkBoxes div p img{
+            margin-right: 5px;
+        }
+        
+        .studentLoginPage .forSignup .mainContentRegister .inputModelRegister form p{
+            font-size: 14px;
+        }
+        #fisrtNameAlert,
+        #passAlert,
+        #emailAlert,
+        #alertMessage{
+            display: none;
+        }
+
+        #alertImg{
+            width: 15px;
+            height: 15px;
+            margin-right: 2px;
+            margin-left: 5px;
+        }
+        #lastNameAlert{
+            font-size: 12px;
+            display: flex;
+            margin-top: 5px;
+            color: #dc3545;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav"></div>
+    <div class="studentLoginPage">
+            <div class="freeRide">
+                <div id="registerContentFree">
+                    <p>A <span class="freeBackround"> free</span>  ride to your dream career</p>
+                </div>
+                <div class="Registeropportunities">
+                    <p>Register and apply to 10000+ opportunities</p>
+                </div>
+                <div class="checkBoxes">
+                    <div>
+                        <p><img src="/images/check_box.svg" alt="">Internships</p>
+                    </div>
+                    <div>
+                        <p><img src="/images/check_box.svg" alt="">Fresher jobs</p>
+                    </div>
+                    <div>
+                        <p><img src="/images/check_box.svg" alt="">Work from home jobs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="forSignup">
+                    <div class="mainContentRegister">
+                        <div class="forGoogleRegister">
+                            <a class="forGoogleClick" href="/auth/google"><span><img id="googleIcon" src="/images/googleLogo.png" alt=""></span>Sign up with Google</a>
+                        </div>
+                        <div class="forOrRegister">
+                            <div class="orBrforeRegister"></div>
+                            <div><p>OR</p></div>
+                            <div class="orAfterRegister"></div>
+                        </div>
+                            <div class="inputModelRegister">
+                                <form action="/internshala/mannual" method="post">
+                                    <p class="emailRegister">Email</p>
+                                    <input class="inputsRegister" id="email" name="email" type="email" placeholder="jhon@example.com">
+                                    <div id="emailAlert">
+                                        <p id="lastNameAlert"><img id="alertImg" src="/images/alert.png"> This field is required</p>
+                                    </div>
+                                    <p class="passRegister">Password</p>
+                                    <input class="inputsRegister" id="password" name="password"  type="password" placeholder="Must be atleast 6 characters">
+                                    <div id="passAlert">
+                                        <p id="lastNameAlert"><img id="alertImg" src="/images/alert.png"> This field is required</p>
+                                    </div>
+                                    <div class="forNameFull">
+                                        <div >
+                                            <p>First Name</p>
+                                            <input id="firstName" class="forFirstName" name="first_name" type="text" placeholder="John">
+                                            <div id="fisrtNameAlert">
+                                                <p id="lastNameAlert"><img id="alertImg" src="/images/alert.png"> This field is required</p>
+                                            </div>
+                                        </div>
+                                        <div >
+                                            <p style="color: #172727;">Last Name</p>
+                                            <input id="lastName" class="forLastName" name="last_name" type="text" placeholder="Doe">
+                                            <div id="alertMessage">
+                                                <p id="lastNameAlert"><img id="alertImg" src="/images/alert.png"> This field is required</p>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="termsConditionRegister">
+                                        <a href=""><p>By signing up, you agree to our <a style="color: #00A5EC; font-weight: 600;"  href="#">Terms and Conditions</a>.</p></a>
+                                    </div>
+                                    <!-- <button id="signUpButton" class="signupButtonRegister">Sign up</button> -->
+                                    <input type="submit" class="signupButtonRegister" value="Sign Up">
+                                    <div class="newUser">
+                                        <p class="newUserRegister">Already registered? <a style="color: #00A5EC; font-weight: 600;" href="#">Login</a> </p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+    </div>
+    <div id="footer">
+
+    </div>
+</body>
+</html>
+<script type="module">
+    import footer from "/scripts/footer.js";
+
+    document.getElementById("footer").innerHTML = footer()
+
+    let arr = JSON.parse(localStorage.getItem("userLoginDetails")) || []
+
+    import navBar from "/scripts/navBarforRegistration.js"
+
+    document.getElementById("nav").innerHTML = navBar()
+
+    document.querySelector(".subMenuSmall").style.height = "140px";
+
+    document.querySelector(".subMenuSmall").style.width = "200px"
+
+    // document.querySelector(".subMenuSmall").innerHTML = `<li><a href="#">Register as a Student</a></li>
+    //                                                      <li><a href="#">Regiter as an Employeer</a></li>
+    //                                                      <li><a href="#">Login</a></li>`;
+
+
+    document.getElementById("signUpButton").addEventListener("click",registrationForStudent)
+
+    function registrationForStudent(e){
+        e.preventDefault()
+        
+        let mail = document.getElementById("email").value;
+
+        let pass = document.getElementById("password").value;
+
+        let fName = document.getElementById("firstName").value;
+
+        let lName = document.getElementById("lastName").value;
+
+        let name = "";
+
+
+        
+        if(fName.length>0){
+            name += fName +" "
+        }else{
+            document.getElementById("firstName").style.border = "1px solid red";
+            document.getElementById("fisrtNameAlert").style.display = "block";
+            document.querySelector(".forSignup").style.height = "550px";
+            
+        }
+        if(lName.length>0){
+            name += lName
+        }else{
+            document.getElementById("lastName").style.border = "1px solid red";
+            document.getElementById("alertMessage").style.display = "block";
+           
+        }
+
+        if(pass.length<6){
+            document.getElementById("password").style.border = "1px solid red"
+            document.getElementById("passAlert").style.display = "block"
+            
+        }
+
+        if(!mail.includes("@")){
+            document.getElementById("email").style.border = "1px solid red"
+            document.getElementById("emailAlert").style.display = "block"
+           
+        }
+        let number =  Math.floor(9203060800 + Math.random() * 900000);
+        console.log(number)
+        
+
+
+        let u = ""
+        for(var i = 0; i<mail.length; i++){
+            if(mail[i]!="@"){
+                u +=mail[i]
+            }else{
+                break;
+            }
+        }
+        let nul = "null";
+        let registrationData = {
+            name:name,
+            email:mail,
+            username:u,
+            password:pass,
+            mobile:number,
+            description: nul,
+        }
+        // console.log(registrationData)
+        if((name.length!=0) &&(mail.includes("@")) && u.length>1 && pass.length>5){
+            console.log(registrationData)
+            arr.push(registrationData)
+            localStorage.setItem('singleUserLoginDetails',JSON.stringify(registrationData))
+            localStorage.setItem("AllUserLoginDetails",JSON.stringify(arr));
+
+            window.location.href = "/product.ejs"
+            return;
+
+        }
+        
+    }
+
+
+
+
+    
+</script>
