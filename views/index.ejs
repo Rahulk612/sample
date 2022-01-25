@@ -268,17 +268,17 @@
 </html>
 <script type="module">
 
-    import footer from "/scripts/footer.js";
+    import footer from "../public/scripts/footer.js";
 
     document.getElementById("footerDiv").innerHTML = footer()
 
 
-    import corosuel from "/scripts/corousel.js"
+    import corosuel from "../public/scripts/corousel.js"
 
     document.getElementById("corosuelDiv").innerHTML = corosuel();
 
 
-    import homePage from "/scripts/mainPage.js";
+    import homePage from "../public/scripts/mainPage.js";
 
     document.getElementById("homePage").innerHTML = homePage();
 
@@ -382,7 +382,7 @@
     let usersData = JSON.parse(localStorage.getItem("AllUserLoginDetails"))
     console.log(usersData)
 
-    import loginPage from "/scripts/loginPage.js";
+    import loginPage from "../public/scripts/loginPage.js";
 
     document.getElementById("login-page").innerHTML = loginPage();
 
