@@ -1,4 +1,4 @@
-let dummyData=[{
+[{
   title:"Data Scientist",
   company:"Knowledge Foundry",
   imgurl:"https://internshala.com/cached_uploads/logo%2F61bafdc2312741639644610.jpg",
