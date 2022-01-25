@@ -68,6 +68,6 @@ app.get("/auth/google/failure", (req, res) => {
 });
 
 app.listen(process.env.PORT || 5000, async (req,res)=> {
-  connect()
+  await connect()
 });
 module.exports = app;
