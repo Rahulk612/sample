@@ -1,0 +1,45 @@
+/* .carausel-cell{
+    width: 85%;
+    height: 370px;
+    border-radius: 10px;
+    margin-right: 20px;
+    background-size: cover;
+    box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.09);
+    background-position: initial;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+}
+.carausel-cell:before{
+    display: block;
+    content: "";
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.carausel-cell {
+  width: 85%;
+  height: 390px;
+  margin-right: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 16px rgb(0 0 0 / 10%);
+  border-radius: 10px;
+  background-size: cover;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}

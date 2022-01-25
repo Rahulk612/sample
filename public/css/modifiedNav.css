@@ -1,0 +1,61 @@
+.nameandMail {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        padding-top: 5%;
+        line-height: 23px;
+      }
+
+      #userName {
+        font-weight: 600;
+        font-size: 14.5px;
+      }
+      .ratingsDiv {
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-between;
+        border: 1px solid lightgray;
+        height: 60px;
+        border-left: none;
+        border-right: none;
+      }
+      .ratingsDiv:hover {
+        color: #00a5ec;
+      }
+      #starRate {
+        font-size: 15px;
+        color: #ffc107;
+      }
+      #chevronIcon {
+        margin-left: -5px;
+        font-size: 30px;
+        font-weight: 100;
+      }
+      #moreOptions {
+        display: flex;
+        width: 100%;
+        /* position: absolute; */
+        justify-content: space-between;
+      }
+      #manageOptions {
+        display: flex;
+        width: 100%;
+        /* position: absolute; */
+        justify-content: space-between;
+      }
+      #moreIcon {
+        font-size: 30px;
+        transform: rotate(90deg);
+      }
+      #moreSubMenu {
+        background-color: #fff;
+        border-top: none;
+        display: none;
+        margin-left: 20px;
+      }
+      #manageSubMenu {
+        background-color: #fff;
+        border-top: none;
+        display: none;
+        margin-left: 40px;
+      }

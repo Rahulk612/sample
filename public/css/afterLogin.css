@@ -1,0 +1,48 @@
+        
+        #registered{
+        width: 23px;
+        height: 23px;
+        border: 1px solid #545454;
+        border-radius: 20px;
+        display: flex;
+        font-size: 11px;
+        font-weight: 600;
+        cursor: pointer;
+        align-items: center;
+        margin-right: 5px;
+    }
+    #registered p{
+    margin-left: 6px;
+    color: #545454;
+    }
+
+
+    .registeredIcon{
+        cursor: pointer;
+    }
+    
+    .registeredIcon:hover #registered p,
+    .registeredIcon:hover #registered{
+        color: #008BDC;
+        
+    } 
+    .registeredIcon:hover #registered{
+        border: 1px solid #008BDC;
+    }
+
+    #registered #registerIcon{
+        margin-left: 12px;
+    }
+    #bookMarkicon{
+        font-size: 22px;
+        color: #545454;
+    }
+
+    #bookMarkicon:hover{
+        color: #008BDC;
+    }
+
+    .messageImg{
+        height: 25px;
+    }
+
