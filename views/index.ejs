@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Intershala</title>
+    <link rel="icon" href="https://pbs.twimg.com/profile_images/1267326528884375560/GXC-xTlu_400x400.jpg">
+    <link rel="stylesheet" href="/css/navBar.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/loginPage.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="/css/csosoul.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://kit.fontawesome.com/f1949c3017.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/main.css">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+
+</head>
+<body>
+    <nav id="navContainer">
+        <div class="navBar">
+            <div class="logo"><a href="/internshala"><img src="https://internshala.com/static/images/common/new_internshala_logo.svg" alt=""></a></div>
+            <div class="navLinks">
+                <ul class="links">
+                    <li>
+                        <a class="internshipColor" href="#">Internship</a>
+                        <div id="navBackround"></div>
+                        <i class='bx bx-caret-down arrow arrow1'></i>
+                        <ul class="internshipsSubMenu subMenu">
+                            <li class="location">
+                                <a class="locationName" href="#">Location</a>
+                                <ul id="intId" class="locationSubMenu subMenu">
+                                    <li><a href="#">Work From Home</a></li>
+                                    <li><a class="#" href="#">Internship in Bangalore</a></li>
+                                    <li><a class="#" href="#">Internship in Delhi</a></li>
+                                    <li><a href="#">Internship in Hyderabad</a></li>
+                                    <li><a href="#">Internship in Mumbai</a></li>
+                                    <li><a href="#">Internship in Chennai</a></li>
+                                    <li><a href="#">Internship in Pune</a></li>
+                                    <li><a href="#">Internship in Kolkata</a></li>
+                                    <li><a href="#">Internship in Jaipur</a></li>
+                                    <li><a href="#">International Internship</a></li>
+                                    <li><a href="#">View all internship</a></li>
+                                </ul>
+                            </li>
+                            <li class="profiles">
+                                <a class="profileName" href="#">Profile</a>
+                                <ul id="profId" class="profilesSubMenu subMenu">
+                                    <li><a href="#">Computer Science Internship</a></li>
+                                    <li><a href="#">Marketing Internship</a></li>
+                                    <li><a href="#">Finance Internship</a></li>
+                                    <li><a href="#">Graphic Design Internship</a></li>
+                                    <li><a href="#">Architecture Internship</a></li>
+                                    <li><a href="#">Mechanical Internship</a></li>
+                                    <li><a href="#">HR Internship</a></li>
+                                    <li><a href="#">Digital Marketing Internship</a></li>
+                                    <li><a href="#">Law Internship</a></li>
+                                    <li><a href="#">Electronics Internship</a></li>
+                                    <li><a href="#">Content Writing Internship</a></li>
+                                    <li><a href="#">Civil Internship</a></li>
+                                    <li><a href="#">Campus Ambassador Internship</a></li>
+                                    <li><a href="#">View all internship</a></li>
+                                </ul>
+                            </li>
+                            <li class="categories">
+                                <a class="categoryName" href="#">Category</a>
+                                <ul id="catId" class="categoriesSubMenu subMenu">
+                                    <li><a href="#">Engineering Internship</a></li>
+                                    <li><a href="#">MBA Internship</a></li>
+                                    <li><a href="#">Part-Time Jobs/Internships</a></li>
+                                    <li><a href="#">Humanities Internships</a></li>
+                                    <li><a href="#">Science Internships</a></li>
+                                    <li><a href="#">Creative Internships</a></li>
+                                    <li><a href="#">Internship with Job Offer</a></li>
+                                    <li><a href="#">Internships for Woman</a></li>
+                                    <li><a href="#">View all internships</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="train">
+                        <a class="trainingColor" href="#">Online Training <a id="navbarOffers" href="#">OFFERS</a> </a>
+                        <i class='bx bx-caret-down arrow arrow2'></i>
+                        <ul class="trainingSubMenu subMenu">
+                            <li class="programming">
+                                <a class="programmingName" href="#">Programming</a>
+                                <ul id="progId" class="programmingSubMenu subMenu">
+                                    <li><a href="#">Programming with Python</a></li>
+                                    <li><a href="#">Web Development</a></li>
+                                    <li><a href="#">Ethical Hacking</a></li>
+                                    <li><a href="#">Programming with C and C++</a></li>
+                                    <li><a href="#">Android App Development</a></li>
+                                    <li><a href="#">Core Java</a></li>
+                                    <li><a href="#">React</a></li>
+                                    <li><a href="#">Blockchain</a></li>
+                                    <li><a href="#">Angular</a></li>
+                                    <li><a href="#">Git & GitHub</a></li>
+                                    <li><a href="#">How to Ace Coding Interviews</a></li>
+                                    <li><a href="#">Data Structures & Algorithms</a></li>
+                                    <li><a href="#">Clinical Trials Analysis & Reporting</a></li>
+                                    <li><a href="#">Matlab</a></li>
+                                    <li><a href="#">Software Testing</a></li>
+                                    <li><a href="#">Node JS</a></li>
+                                    <li><a href="#">Robotic Process Automation</a></li>
+                                    <li><a href="#">PLC Programming</a></li>
+                                    <li><a href="#">AR/VR</a></li>
+                                </ul>
+                            </li>
+                            <li class="business">
+                                <a class="businessName" href="#">Business & Management</a>
+                                <ul id="busId" class="businessSubMenu subMenu">
+                                    <li><a href="#">Digital Marketing</a></li>
+                                    <li><a href="#">Advanced Excel</a></li>
+                                    <li><a href="#">Financial Modeling and Valuation</a></li>
+                                    <li><a href="#">Business Communication Skills</a></li>
+                                    <li><a href="#">Beginner's Trading Certification</a></li>
+                                    <li><a href="#">Tally</a></li>
+                                    <li><a href="#">Human Resources Management</a></li>
+                                    <li><a href="#">Advanced Human Resources Management</a></li>
+                                    <li><a href="#">SQL for Data Analytics</a></li>
+                                    <li><a href="#">Business Analytics</a></li>
+                                    <li><a href="#">Digital Marketing Specialization<a id="newOffers" href="#">NEW</a></a></li>
+                                </ul>
+                            </li>
+                            <li class="core">
+                                <a class="coreName" href="#">Core Engineering</a>
+                                <ul id="corId" class="coreSubMenu subMenu">
+                                    <li><a href="#">AutoCAD</a></li>
+                                    <li><a href="#">Advanced 3D</a></li>
+                                    <li><a href="#">SOLIDWORKS</a></li>
+                                    <li><a href="#">Advanced SOLIDWORKS</a></li>
+                                    <li><a href="#">STAAD Pro</a></li>
+                                    <li><a href="#">Fusion 360</a></li>
+                                    <li><a href="#">Internet of Things</a></li>
+                                    <li><a href="#">Ansys</a></li>
+                                    <li><a href="#">3D Printing</a></li>
+                                    <li><a href="#">PCB Design</a></li>
+                                    <li><a href="#">Arduino</a></li>
+                                    <li><a href="#">CATIA</a></li>
+                                    <li><a href="#">MATLAB</a></li>
+                                    <li><a href="#">Engineering Drawing</a></li>
+                                    <li><a href="#">VLSI Design</a></li>
+                                </ul>
+                            </li>
+                            <li class="dataScience">
+                                <a class="dataScienceName" href="#">Data Science</a>
+                                <ul id="dataId" class="dataScienceSubMenu subMenu">
+                                    <li><a href="#">Machine Learning</a></li>
+                                    <li><a href="#">Data Science</a></li>
+                                    <li><a href="#">Tableau</a></li>
+                                    <li><a href="#">Deep Learning</a></li>
+                                    <li><a href="#">SAS Programming</a></li>
+                                    <li><a href="#">Clinical Trial Analysis & Reporting</a></li>
+                                    <li><a href="#">Statistic for Data Science</a></li>
+                                    <li><a href="#">Power BI</a></li>
+                                    <li><a href="#">SQL for Data Analytics</a></li>
+                                    <li><a href="#">Data Specializations <a id="newOffers" href="#">NEW</a></a></li>
+                                    <li><a href="#">Natural Language Processing</a></li>
+                                </ul>
+                            </li>
+                            <li class="design">
+                                <a class="designName" href="#">Design</a>
+                                <ul id="desId" class="designSubMenu subMenu">
+                                    <li><a href="#">Graphic Design</a></li>
+                                    <li><a href="#">UI/UX Design</a></li>
+                                    <li><a href="#">Video Editing</a></li>
+                                    <li><a href="#">Animation</a></li>
+                                    <li><a href="#">WordPress</a></li>
+                                    <li><a href="#">Digital Art</a></li>
+                                    <li><a href="#">Color Theory</a></li>
+                                </ul>
+                            </li>
+                            <li class="creative">
+                                <a class="creativeName" href="#">Creative Arts</a>
+                                <ul id="creativeId" class="creativeSubMenu subMenu">
+                                    <li><a href="#">Creative Writing</a></li>
+                                    <li><a href="#">Learn Guitar in 30 days</a></li>
+                                    <li><a href="#">Photography</a></li>
+                                    <li><a href="#">Calligraphy</a></li>
+                                    <li><a href="#">Acting</a></li>
+                                </ul>
+                            </li>
+                            <li class="language">
+                                <a class="languageName" href="#">Language</a>
+                                <ul id="langId" class="languageSubMenu subMenu">
+                                    <li><a href="#">French</a></li>
+                                </ul>
+                            </li>
+                            <li class="career">
+                                <a class="careerName" href="#">Career Development</a>
+                                <ul id="carId" class="careerSubMenu subMenu">
+                                    <li><a href="#">Business Communication Skills</a></li>
+                                    <li><a href="#">Internship & Job Preparation</a></li>
+                                    <li><a href="#">How to Ace Coding Interviews</a></li>
+                                    <li><a href="#">Interviews Preparation</a></li>
+                                </ul>
+                            </li>
+                            <li class="architecture">
+                                <a class="architectureName" href="#">Architecture</a>
+                                <ul id="arcId" class="architectureSubMenu subMenu">
+                                    <li><a href="#">AutoCAD</a></li>
+                                    <li><a href="#">Autocad 3D</a></li>
+                                    <li><a href="#">Revit</a></li>
+                                </ul>
+                            </li>
+                            <!-- <li class="specialization">
+                                <a class="specializationName" href="#">Specializations</a>
+                                <ul class="specializationSubMenu subMenu">
+                                    <li><a href="#">J</a></li>
+                                    <li><a href="#">Business & Management</a></li>
+                                    <li><a href="#">Core Engineering</a></li>
+                                    <li><a href="#">Data Science</a></li>
+                                    <li><a href="#">Design</a></li>
+                                    <li><a href="#">Creative Arts</a></li>
+                                    <li><a href="#">Language</a></li>
+                                    <li><a href="#">Career Development</a></li>
+                                    <li><a href="#">Achitecture</a></li>
+                                    <li><a href="#">Specializations</a></li>
+                                </ul>
+                            </li> -->
+                        </ul>
+                    </li>
+                    <li class="fresher">
+                        <a class="fresherColor" href="/internshala/products/jobs">Fresher Jobs</a>
+                    </li>
+                    <li>
+                        <button id="navbarLogin">Login</button>
+                    </li>
+                    <li class="registerButton">
+                        <button style="cursor: pointer;" id="register">Register<i id="register_icon" class='bx bx-caret-down arrow3'></i></button>
+                        <ul class="registerSubMenu subMenuSmall">
+                            <li><a href="/internshala/studentRegistration">As a Student</a></li>
+                            <li><a href="#">As an Employeer</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br><br><br><br>
+    <div id="inputSearch" style="display:flex; justify-content:center ; ">
+        <input id="searchIcon" type="text" placeholder="What are you loking for ?">
+        <div id="iconSearch"><i id="iconsSearch" class='bx bx-search' style='color:rgba(255,255,255,0.98)'  ></i></i></div>
+    </div>
+    <br><br>
+    <div id=corosuelDiv>
+
+    </div>
+    <div id="login-page">
+
+    </div>
+    <div id="homePage">
+
+    </div>
+    <br><br><br><br><br>
+    <div id="footerDiv">
+
+    </div>
+
+</body>
+</html>
+<script type="module">
+
+    import footer from "/scripts/footer.js";
+
+    document.getElementById("footerDiv").innerHTML = footer()
+
+
+    import corosuel from "/scripts/corousel.js"
+
+    document.getElementById("corosuelDiv").innerHTML = corosuel();
+
+
+    import homePage from "/scripts/mainPage.js";
+
+    document.getElementById("homePage").innerHTML = homePage();
+
+
+    document.getElementById("intId").addEventListener("click",(e)=>{
+        var arr = e.target.innerHTML;
+        arr = arr.split(" ");
+       let city = arr[arr.length-1];
+       console.log(city)
+       localStorage.setItem("uniQuery",city)
+        window.location.href = ("/internshala/products/interns")
+    })
+
+    document.getElementById("profId").addEventListener("click",(e)=>{
+        var arr = e.target.innerHTML;
+        arr = arr.replace("Internship","")
+        console.log(arr)
+       localStorage.setItem("uniQuery",arr)
+        window.location.href = "/internshala/products/interns"
+    })
+
+
+    document.getElementById("catId").addEventListener("click",(e)=>{
+        var arr = e.target.innerHTML;
+        arr = arr.replace("Internships","")
+        arr = arr.replace("Internship","");
+        console.log(arr)
+       localStorage.setItem("uniQuery",arr)
+        window.location.href = "/internshala/products/interns"
+    })
+
+// Trainings***********************************************
+
+
+    document.getElementById("progId").addEventListener("click",(e)=>{
+        var str = e.target.innerHTML;
+        console.log(str)
+       localStorage.setItem("train",str)
+        window.location.href = ("/internshala/trainings")
+    })
+
+    document.getElementById("corId").addEventListener("click",(e)=>{
+        var str = e.target.innerHTML;
+        console.log(str)
+    localStorage.setItem("train",str)
+        window.location.href = ("/internshala/trainings")
+    })
+    document.getElementById("busId").addEventListener("click",(e)=>{
+        var str = e.target.innerHTML;
+        console.log(str)
+   localStorage.setItem("train",str)
+        window.location.href = ("/internshala/trainings")
+    })
+    
+    document.getElementById("dataId").addEventListener("click",(e)=>{
+        var str = e.target.innerHTML;
+        console.log(str)
+    localStorage.setItem("train",str)
+        window.location.href = ("/internshala/trainings")
+    })
+    document.getElementById("desId").addEventListener("click",(e)=>{
+        var str = e.target.innerHTML;
+        console.log(str)
+   localStorage.setItem("train",str)
+        window.location.href = ("/internshala/trainings")
+    })
+    document.getElementById("creativeId").addEventListener("click",(e)=>{
+        var str = e.target.innerHTML;
+        console.log(str)
+    localStorage.setItem("train",str)
+        window.location.href = ("/internshala/trainings")
+    })
+    document.getElementById("langId").addEventListener("click",(e)=>{
+        var str = e.target.innerHTML;
+        console.log(str)
+    localStorage.setItem("train",str)
+        window.location.href = ("/internshala/trainings")
+    })
+    document.getElementById("carId").addEventListener("click",(e)=>{
+        var str = e.target.innerHTML;
+        console.log(str)
+    localStorage.setItem("train",str)
+        window.location.href = ("/internshala/trainings")
+    })
+    document.getElementById("arcId").addEventListener("click",(e)=>{
+        var str = e.target.innerHTML;
+        console.log(str)
+    localStorage.setItem("train",str)
+        window.location.href = ("/internshala/trainings")
+    })
+    
+
+    for(var i = 0; i<document.querySelectorAll(".box").length; i++){
+        document.querySelectorAll(".box")[i].addEventListener("click",function(){
+            let uniQuery = this.innerText;
+            localStorage.setItem("uniQuery",uniQuery)
+            window.location.href = "internshala/products/interns"
+        })
+    }
+
+    let usersData = JSON.parse(localStorage.getItem("AllUserLoginDetails"))
+    console.log(usersData)
+
+    import loginPage from "/scripts/loginPage.js";
+
+    document.getElementById("login-page").innerHTML = loginPage();
+
+
+    document.getElementById('navbarLogin').addEventListener('click',function(){
+        document.querySelector("#mainPageModel").style.display = "flex";
+        document.getElementById("navContainer").style.zIndex = "0";
+    });
+
+    
+
+
+
+    document.querySelector(".close").addEventListener('click',function(){
+        document.querySelector("#mainPageModel").style.display = "none";
+        document.getElementById("navContainer").style.zIndex = "100";
+
+    });
+
+    document.querySelector(".employerLogin").addEventListener("click",function(){
+        document.querySelector("#employerName").style.color = "#007bff"
+        document.querySelector(".employerLogin").style.border = "2px solid #007bff"
+        document.querySelector(".employerLogin").style.borderLeft = "none"
+        document.querySelector(".employerLogin").style.borderRight = "none"
+        document.querySelector(".employerLogin").style.borderTop = "none";
+
+
+        document.querySelector(".studentLogin").style.border = "none";
+        document.querySelector("#studentName").style.color = "black";
+
+
+        document.querySelector(".forOr").style.display = "none";
+        document.querySelector(".forGoogle").style.display = "none";
+
+        document.querySelector(".mainContent").style.height = "400px";
+        document.querySelector(".inputModel").style.marginTop = "-16%"
+    })
+
+    document.querySelector(".studentLogin").addEventListener("click",function(){
+        document.querySelector("#studentName").style.color = "#007bff"
+        document.querySelector(".studentLogin").style.border = "2px solid #007bff"
+        document.querySelector(".studentLogin").style.borderLeft = "none"
+        document.querySelector(".studentLogin").style.borderRight = "none"
+        document.querySelector(".studentLogin").style.borderTop = "none";
+
+
+        document.querySelector(".employerLogin").style.border = "none";
+        document.querySelector("#employerName").style.color = "black";
+
+
+        document.querySelector(".forOr").style.display = "flex";
+        document.querySelector(".forGoogle").style.display = "flex";
+
+        document.querySelector(".mainContent").style.height = "500px";
+        document.querySelector(".inputModel").style.marginTop = "6%"
+    })
+
+    document.querySelector("#buttonLogin").addEventListener("click",function(event){
+        event.preventDefault()
+        let email = document.getElementById("emailLogin").value;
+
+        let passWord = document.getElementById("passwordLogin").value;
+        let emailFlag = false;
+        let passFlag = false;
+        let details = null;
+        usersData.map((item)=>{
+            if(email==item.email){
+                emailFlag = true;
+                details = item;
+            }
+            if(passWord==item.password){
+                passFlag = true;
+                details = item
+            }
+        })
+        
+
+        if(emailFlag==false && passFlag==true){
+            document.getElementById("emailMessage").style.display = "block";
+
+            document.getElementById("emailNameAlert").innerHTML = `<p id="emailNameAlert"><img id="alertImg" src="./images/alert.png">Please enter a valid email address</p>`
+
+        }else if(passFlag==false && emailFlag==true){
+            document.getElementById("passMessage").style.display = "block";
+            document.getElementById("passNameAlert").innerHTML = `<p id="passNameAlert"><img id="alertImg" src="./images/alert.png">Please enter a valid password</p>`
+
+        }
+
+        if(emailFlag && passFlag){
+
+            localStorage.setItem('singleUserLoginDetails',JSON.stringify(details))
+
+            window.location.href = "../productPage.html";
+        }
+        
+    })
+
+    
+    
+</script>
