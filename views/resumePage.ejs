@@ -281,22 +281,32 @@
     
   }
 
-  let contNav = document.getElementById("container");
-  import navbar from '/scripts/afterLoginNavbar.js';
-  console.log(navbar);
-  contNav.innerHTML = navbar()
-
   let footerVar = document.getElementById("rfooter");
   import footer from '/scripts/footer.js';
   // console.log(footer);
   footerVar.innerHTML = footer()
 
+  let contNav = document.getElementById("container");
+
+  import navBar from "/scripts/afterLoginNavbar.js";
+  import navBarRegistration from "/scripts/navBarforRegistration.js";
+
   let all = JSON.parse(localStorage.getItem("UserDeatils"));
-    console.log("all",all);
+  console.log("all",all);
+
+  if (all=="null" || all=="" || all==null) {
+    console.log("Without");
+    contNav.innerHTML = navBarRegistration();
+    document.querySelector(".subMenuSmall").style.height = "150px";
+    document.querySelector(".subMenuSmall").style.width = "200px";
+    document.querySelector(".subMenuSmall").style.marginLeft = "20px";
+  } else {
+    console.log("With");
+    contNav.innerHTML = navBar();
+
+  }
 
     if (all!==null){
-      console.log("asd")
-    let initial = all.first_name;
 
     document.getElementById("userInitial").innerHTML = initial[0].toUpperCase();
 
