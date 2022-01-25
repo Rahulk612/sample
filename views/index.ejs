@@ -289,7 +289,7 @@
        let city = arr[arr.length-1];
        console.log(city)
        localStorage.setItem("uniQuery",city)
-        window.location.href = ("/internshala/products/interns")
+        window.location.href = ("/products/interns")
     })
 
     document.getElementById("profId").addEventListener("click",(e)=>{
@@ -297,7 +297,7 @@
         arr = arr.replace("Internship","")
         console.log(arr)
        localStorage.setItem("uniQuery",arr)
-        window.location.href = "/internshala/products/interns"
+        window.location.href = "/products/interns"
     })
 
 
@@ -307,7 +307,7 @@
         arr = arr.replace("Internship","");
         console.log(arr)
        localStorage.setItem("uniQuery",arr)
-        window.location.href = "/internshala/products/interns"
+        window.location.href = "/products/interns"
     })
 
 // Trainings***********************************************
@@ -317,45 +317,45 @@
         var str = e.target.innerHTML;
         console.log(str)
        localStorage.setItem("train",str)
-        window.location.href = ("/internshala/trainings")
+        window.location.href = ("/trainings")
     })
 
     document.getElementById("corId").addEventListener("click",(e)=>{
         var str = e.target.innerHTML;
         console.log(str)
     localStorage.setItem("train",str)
-        window.location.href = ("/internshala/trainings")
+        window.location.href = ("/trainings")
     })
     document.getElementById("busId").addEventListener("click",(e)=>{
         var str = e.target.innerHTML;
         console.log(str)
    localStorage.setItem("train",str)
-        window.location.href = ("/internshala/trainings")
+        window.location.href = ("/trainings")
     })
     
     document.getElementById("dataId").addEventListener("click",(e)=>{
         var str = e.target.innerHTML;
         console.log(str)
     localStorage.setItem("train",str)
-        window.location.href = ("/internshala/trainings")
+        window.location.href = ("/trainings")
     })
     document.getElementById("desId").addEventListener("click",(e)=>{
         var str = e.target.innerHTML;
         console.log(str)
    localStorage.setItem("train",str)
-        window.location.href = ("/internshala/trainings")
+        window.location.href = ("/trainings")
     })
     document.getElementById("creativeId").addEventListener("click",(e)=>{
         var str = e.target.innerHTML;
         console.log(str)
     localStorage.setItem("train",str)
-        window.location.href = ("/internshala/trainings")
+        window.location.href = ("/trainings")
     })
     document.getElementById("langId").addEventListener("click",(e)=>{
         var str = e.target.innerHTML;
         console.log(str)
     localStorage.setItem("train",str)
-        window.location.href = ("/internshala/trainings")
+        window.location.href = ("/trainings")
     })
     document.getElementById("carId").addEventListener("click",(e)=>{
         var str = e.target.innerHTML;
@@ -367,7 +367,7 @@
         var str = e.target.innerHTML;
         console.log(str)
     localStorage.setItem("train",str)
-        window.location.href = ("/internshala/trainings")
+        window.location.href = ("/trainings")
     })
     
 
@@ -375,7 +375,7 @@
         document.querySelectorAll(".box")[i].addEventListener("click",function(){
             let uniQuery = this.innerText;
             localStorage.setItem("uniQuery",uniQuery)
-            window.location.href = "internshala/products/interns"
+            window.location.href = "/products/interns"
         })
     }
 

@@ -4,7 +4,7 @@ require("dotenv").config();
 
 // const Student = require("../models/studentRegister.model");
 
-// const Product = require("../models/products.model");
+const Product = require("../models/products.model");
 
 const router = express.Router();
 
@@ -26,11 +26,11 @@ router.get("/studentRegistration", async (req, res) => {
   }
 });
 
-// router.get("/productPage", async (req, res) => {
-//   let data = await Product.find().lean().exec();
-//   dummyData = JSON.stringify(data);
-//   return res.render("interns", { dummyData: dummyData, user: "" });
-// });
+router.get("/productPage", async (req, res) => {
+  let data = await Product.find().lean().exec();
+  dummyData = JSON.stringify(data);
+  return res.render("interns", { dummyData: dummyData, user: "" });
+});
 
 // mannual login and registration
 
