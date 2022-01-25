@@ -9,13 +9,6 @@ const Product = require("../models/products.model");
 const router = express.Router();
 
 // Main page with Login and logout withOut Login
-router.get("", async (req, res) => {
-  try {
-    return res.render("index");
-  } catch (err) {
-    res.send(err.message);
-  }
-});
 
 router.get("/logout", async (req, res) => {
   try {
