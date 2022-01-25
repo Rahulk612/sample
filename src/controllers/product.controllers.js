@@ -37,16 +37,16 @@ router.get("/interns", async (req, res) => {
 
 
 
-// router.get("/jobs", async (req, res) => {
-//   try {
-//     let data = await Products.find().lean().exec();
-//     // console.log("data:", data);
-//     dummyData = JSON.stringify(data);
+router.get("/jobs", async (req, res) => {
+  try {
+    let data = await Products.find().lean().exec();
+    // console.log("data:", data);
+    dummyData = JSON.stringify(data);
 
-//     res.render("jobs", { dummyData: dummyData,user:"" });
-//   } catch (error) {
-//     return res.status(500).send(error.massage);
-//   }
-// });
+    res.render("jobs", { dummyData: dummyData,user:"" });
+  } catch (error) {
+    return res.status(500).send(error.massage);
+  }
+});
 
 module.exports = router;
