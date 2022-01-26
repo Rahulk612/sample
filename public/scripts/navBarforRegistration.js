@@ -10,7 +10,7 @@ function navBarRegistration(){
                     <ul class="internshipsSubMenu subMenu">
                         <li class="location">
                             <a class="locationName" href="#">Location</a>
-                            <ul class="locationSubMenu subMenu">
+                            <ul id="intId" class="locationSubMenu subMenu">
                                 <li><a href="#">Work From Home</a></li>
                                 <li><a href="#">Internship in Bangalore</a></li>
                                 <li><a href="#">Internship in Delhi</a></li>
@@ -26,7 +26,7 @@ function navBarRegistration(){
                         </li>
                         <li class="profiles">
                             <a class="profileName" href="#">Profile</a>
-                            <ul class="profilesSubMenu subMenu">
+                            <ul id="profId" class="profilesSubMenu subMenu">
                                 <li><a  href="#">Computer Science Internship</a></li>
                                 <li><a href="#">Marketing Internship</a></li>
                                 <li><a href="#">Finance Internship</a></li>
@@ -45,7 +45,7 @@ function navBarRegistration(){
                         </li>
                         <li class="categories">
                             <a class="categoryName" href="#">Category</a>
-                            <ul class="categoriesSubMenu subMenu">
+                            <ul id="catId" class="categoriesSubMenu subMenu">
                                 <li><a href="#">Engineering Internship</a></li>
                                 <li><a href="#">MBA Internship</a></li>
                                 <li><a href="#">Part-Time Jobs/Internships</a></li>
@@ -65,7 +65,7 @@ function navBarRegistration(){
                     <ul class="trainingSubMenu subMenu">
                         <li class="programming">
                             <a class="programmingName" href="#">Programming</a>
-                            <ul class="programmingSubMenu subMenu">
+                            <ul id="progId" class="programmingSubMenu subMenu">
                                 <li><a href="#">Programming with Python</a></li>
                                 <li><a href="#">Web Development</a></li>
                                 <li><a href="#">Ethical Hacking</a></li>
@@ -89,7 +89,7 @@ function navBarRegistration(){
                         </li>
                         <li class="business">
                             <a class="businessName" href="#">Business & Management</a>
-                            <ul class="businessSubMenu subMenu">
+                            <ul id="busId" class="businessSubMenu subMenu">
                                 <li><a href="#">Digital Marketing</a></li>
                                 <li><a href="#">Advanced Excel</a></li>
                                 <li><a href="#">Financial Modeling and Valuation</a></li>
@@ -105,7 +105,7 @@ function navBarRegistration(){
                         </li>
                         <li class="core">
                             <a class="coreName" href="#">Core Engineering</a>
-                            <ul class="coreSubMenu subMenu">
+                            <ul id="corId" class="coreSubMenu subMenu">
                                 <li><a href="#">AutoCAD</a></li>
                                 <li><a href="#">Advanced 3D</a></li>
                                 <li><a href="#">SOLIDWORKS</a></li>
@@ -125,7 +125,7 @@ function navBarRegistration(){
                         </li>
                         <li class="dataScience">
                             <a class="dataScienceName" href="#">Data Science</a>
-                            <ul class="dataScienceSubMenu subMenu">
+                            <ul id="dataId" class="dataScienceSubMenu subMenu">
                                 <li><a href="#">Machine Learning</a></li>
                                 <li><a href="#">Data Science</a></li>
                                 <li><a href="#">Tableau</a></li>
@@ -141,7 +141,7 @@ function navBarRegistration(){
                         </li>
                         <li class="design">
                             <a class="designName" href="#">Design</a>
-                            <ul class="designSubMenu subMenu">
+                            <ul id="desId" class="designSubMenu subMenu">
                                 <li><a href="#">Graphic Design</a></li>
                                 <li><a href="#">UI/UX Design</a></li>
                                 <li><a href="#">Video Editing</a></li>
@@ -153,7 +153,7 @@ function navBarRegistration(){
                         </li>
                         <li class="creative">
                             <a class="creativeName" href="#">Creative Arts</a>
-                            <ul class="creativeSubMenu subMenu">
+                            <ul id="creativeId" class="creativeSubMenu subMenu">
                                 <li><a href="#">Creative Writing</a></li>
                                 <li><a href="#">Learn Guitar in 30 days</a></li>
                                 <li><a href="#">Photography</a></li>
@@ -163,13 +163,13 @@ function navBarRegistration(){
                         </li>
                         <li class="language">
                             <a class="languageName" href="#">Language</a>
-                            <ul class="languageSubMenu subMenu">
+                            <ul id="langId" class="languageSubMenu subMenu">
                                 <li><a href="#">French</a></li>
                             </ul>
                         </li>
                         <li class="career">
                             <a class="careerName" href="#">Career Development</a>
-                            <ul class="careerSubMenu subMenu">
+                            <ul id="carId" class="careerSubMenu subMenu">
                                 <li><a href="#">Business Communication Skills</a></li>
                                 <li><a href="#">Internship & Job Preparation</a></li>
                                 <li><a href="#">How to Ace Coding Interviews</a></li>
@@ -178,27 +178,12 @@ function navBarRegistration(){
                         </li>
                         <li class="architecture">
                             <a class="architectureName" href="#">Architecture</a>
-                            <ul class="architectureSubMenu subMenu">
+                            <ul id="arcId" class="architectureSubMenu subMenu">
                                 <li><a href="#">AutoCAD</a></li>
                                 <li><a href="#">Autocad 3D</a></li>
                                 <li><a href="#">Revit</a></li>
                             </ul>
                         </li>
-                        <!-- <li class="specialization">
-                            <a class="specializationName" href="#">Specializations</a>
-                            <ul class="specializationSubMenu subMenu">
-                                <li><a href="#">J</a></li>
-                                <li><a href="#">Business & Management</a></li>
-                                <li><a href="#">Core Engineering</a></li>
-                                <li><a href="#">Data Science</a></li>
-                                <li><a href="#">Design</a></li>
-                                <li><a href="#">Creative Arts</a></li>
-                                <li><a href="#">Language</a></li>
-                                <li><a href="#">Career Development</a></li>
-                                <li><a href="#">Achitecture</a></li>
-                                <li><a href="#">Specializations</a></li>
-                            </ul>
-                        </li> -->
                     </ul>
                 </li>
                 <li class="fresher">
@@ -208,7 +193,7 @@ function navBarRegistration(){
                 <li class="registerButton">
                     <p style="cursor: pointer;" id="registerStudent">Login/Register<i id="register_icon" class='bx bx-caret-down arrow3'></i></p>
                     <ul class="registerSubMenu subMenuSmall">
-                        <li><a href="#">Register as a Student</a></li>
+                        <li><a href="/studentRegistration">Register as a Student</a></li>
                         <li><a href="#">Regiter as an Employeer</a></li>
                         <li><a id="loginPagebetween" href="#">Login</a></li>
                     </ul>

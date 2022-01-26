@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Information</title>
 
-    <link rel="stylesheet" href="/css/afterLogin.css">
+    <link rel="stylesheet" href="/css/afterLogin.css" />
 
     <link rel="stylesheet" href="/css/individualJob.css" />
 
-    <link rel="stylesheet" href="/css/footer.css">
-    
-   
+    <link rel="stylesheet" href="/css/footer.css" />
 
-    <link rel="stylesheet" href="/css/navBar.css">
+    <link rel="stylesheet" href="/css/navBar.css" />
 
-    <link rel="icon" href="https://pbs.twimg.com/profile_images/1267326528884375560/GXC-xTlu_400x400.jpg">
+    <link
+      rel="icon"
+      href="https://pbs.twimg.com/profile_images/1267326528884375560/GXC-xTlu_400x400.jpg"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,18 +32,21 @@
       src="https://kit.fontawesome.com/f1949c3017.js"
       crossorigin="anonymous"
     ></script>
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <!-- <style>
     </style> -->
   </head>
   <body>
     <div id="container"></div>
-    <div id="rContainer"> </div>
+    <div id="rContainer"></div>
     <div id="rfooter"></div>
   </body>
 </html>
 
-<script type = "module">
+<script type="module">
   // let dummyData = {
   //   title: "Email & Customer Support Executive",
   //   company: "Stellarr",
@@ -145,7 +149,7 @@
     company.setAttribute("id", "grey");
 
     let img = document.createElement("img");
-    img.src = item. imgurl;
+    img.src = item.imgurl;
     img.setAttribute("id", "img");
 
     let locationDiv = document.createElement("div");
@@ -339,10 +343,9 @@
   let contNav = document.getElementById("container");
   // import navbar from '/scripts/afterLoginNavbar.js';
   // console.log(navbar);
-  
 
   let footerVar = document.getElementById("rfooter");
-  import footer from '/scripts/footer.js';
+  import footer from "/scripts/footer.js";
   // console.log(footer);
   footerVar.innerHTML = footer();
 
@@ -350,9 +353,9 @@
   import navBarRegistration from "/scripts/navBarforRegistration.js";
 
   let all = localStorage.getItem("UserDeatils");
-    console.log("indi"+all);
+  console.log("indi" + all);
 
-    if (all=="null" || all=="" || all==null) {
+  if (all == "null" || all == "" || all == null) {
     console.log("Without");
     contNav.innerHTML = navBarRegistration();
     document.querySelector(".subMenuSmall").style.height = "150px";
@@ -360,23 +363,20 @@
     document.querySelector(".subMenuSmall").style.marginLeft = "20px";
   } else {
     console.log("With");
-    all = JSON.parse(all)
+    all = JSON.parse(all);
     contNav.innerHTML = navBar();
-
   }
 
-
+  if (all) {
     let initial = all.first_name;
-  console.log(all.first_name)
+    console.log(all.first_name);
     document.getElementById("userInitial").innerHTML = initial[0].toUpperCase();
-
 
     document.querySelector(".subMenuSmall").style.height = "420px";
 
     document.querySelector(".subMenuSmall").style.width = "250px";
 
     document.querySelector(".subMenuSmall").style.left = "-310%";
-
 
     document.querySelector(".subMenuSmall").innerHTML = `<li>
                                                         <div class="nameandMail">
@@ -417,43 +417,130 @@
                                                             </ul>
                                                             </div>`;
 
-    document.getElementById("moreOptions").addEventListener("click",function(){
-        if(document.getElementById("moreSubMenu").style.display == 'none'){
-        document.getElementById("moreSubMenu").style.display = 'block';
-        document.querySelector(".subMenuSmall").style.height = "500px";
-        document.querySelector(".first").style.transform = "rotate(270deg)"
-        }else{
-        document.getElementById("moreSubMenu").style.display = 'none';
-        document.querySelector(".subMenuSmall").style.height = "420px";
-        document.querySelector(".first").style.transform = "rotate(90deg)"
+    document
+      .getElementById("moreOptions")
+      .addEventListener("click", function () {
+        if (document.getElementById("moreSubMenu").style.display == "none") {
+          document.getElementById("moreSubMenu").style.display = "block";
+          document.querySelector(".subMenuSmall").style.height = "500px";
+          document.querySelector(".first").style.transform = "rotate(270deg)";
+        } else {
+          document.getElementById("moreSubMenu").style.display = "none";
+          document.querySelector(".subMenuSmall").style.height = "420px";
+          document.querySelector(".first").style.transform = "rotate(90deg)";
         }
+      });
+
+    document
+      .getElementById("manageOptions")
+      .addEventListener("click", function () {
+        if (document.getElementById("manageSubMenu").style.display == "none") {
+          document.getElementById("manageSubMenu").style.display = "block";
+          document.querySelector(".subMenuSmall").style.height = "640px";
+          document.querySelector(".second").style.transform = "rotate(270deg)";
+        } else {
+          document.getElementById("manageSubMenu").style.display = "none";
+          document.querySelector(".subMenuSmall").style.height = "500px";
+          document.querySelector(".second").style.transform = "rotate(90deg)";
+        }
+      });
+
+    document.querySelector(".messageImg").onmouseover = () => {
+      let im = document.querySelector(".messageImg");
+
+      im.src = "/images/message_new_hover.svg";
+    };
+
+    document.querySelector(".messageImg").onmouseout = () => {
+      let im = document.querySelector(".messageImg");
+      im.src = "/images/message_new.svg";
+    };
+  }
+  // internships
+    document.getElementById("intId").addEventListener("click",(e)=>{
+        var arr = e.target.innerHTML;
+        arr = arr.split(" ");
+       let city = arr[arr.length-1];
+       console.log(city)
+       localStorage.setItem("uniQuery",city)
+        window.location.href = ("/products/interns")
     })
 
-    document.getElementById("manageOptions").addEventListener("click",function(){
-        
-        if(document.getElementById("manageSubMenu").style.display == 'none'){
-        document.getElementById("manageSubMenu").style.display = 'block';
-        document.querySelector(".subMenuSmall").style.height = "640px";
-        document.querySelector(".second").style.transform = "rotate(270deg)"
-        }else{
-        document.getElementById("manageSubMenu").style.display = 'none';
-        document.querySelector(".subMenuSmall").style.height = "500px";
-        document.querySelector(".second").style.transform = "rotate(90deg)"
-        }
+    document.getElementById("profId").addEventListener("click",(e)=>{
+        var arr = e.target.innerHTML;
+        arr = arr.replace("Internship","")
+        console.log(arr)
+       localStorage.setItem("uniQuery",arr)
+        window.location.href = "/products/interns"
     })
 
-        document.querySelector(".messageImg").onmouseover = () => {
-            let im =  document.querySelector(".messageImg")
 
-            im.src = "/images/message_new_hover.svg"
-        }
-        
+    document.getElementById("catId").addEventListener("click",(e)=>{
+        var arr = e.target.innerHTML;
+        arr = arr.replace("Internships","")
+        arr = arr.replace("Internship","");
+        console.log(arr)
+       localStorage.setItem("uniQuery",arr)
+        window.location.href = "/products/interns"
+    })
 
-         document.querySelector(".messageImg").onmouseout = () => {
-           let im =  document.querySelector(".messageImg")
-            im.src =  "/images/message_new.svg"
-         }
+// Trainings***********************************************
 
 
+    document.getElementById("progId").addEventListener("click",(e)=>{
+        var str = e.target.innerHTML;
+        console.log(str)
+       localStorage.setItem("train",str)
+        window.location.href = ("/trainings")
+    })
 
+    document.getElementById("corId").addEventListener("click",(e)=>{
+        var str = e.target.innerHTML;
+        console.log(str)
+    localStorage.setItem("train",str)
+        window.location.href = ("/trainings")
+    })
+    document.getElementById("busId").addEventListener("click",(e)=>{
+        var str = e.target.innerHTML;
+        console.log(str)
+   localStorage.setItem("train",str)
+        window.location.href = ("/trainings")
+    })
+    
+    document.getElementById("dataId").addEventListener("click",(e)=>{
+        var str = e.target.innerHTML;
+        console.log(str)
+    localStorage.setItem("train",str)
+        window.location.href = ("/trainings")
+    })
+    document.getElementById("desId").addEventListener("click",(e)=>{
+        var str = e.target.innerHTML;
+        console.log(str)
+   localStorage.setItem("train",str)
+        window.location.href = ("/trainings")
+    })
+    document.getElementById("creativeId").addEventListener("click",(e)=>{
+        var str = e.target.innerHTML;
+        console.log(str)
+    localStorage.setItem("train",str)
+        window.location.href = ("/trainings")
+    })
+    document.getElementById("langId").addEventListener("click",(e)=>{
+        var str = e.target.innerHTML;
+        console.log(str)
+    localStorage.setItem("train",str)
+        window.location.href = ("/trainings")
+    })
+    document.getElementById("carId").addEventListener("click",(e)=>{
+        var str = e.target.innerHTML;
+        console.log(str)
+    localStorage.setItem("train",str)
+        window.location.href = ("/internshala/trainings")
+    })
+    document.getElementById("arcId").addEventListener("click",(e)=>{
+        var str = e.target.innerHTML;
+        console.log(str)
+    localStorage.setItem("train",str)
+        window.location.href = ("/trainings")
+    })
 </script>
