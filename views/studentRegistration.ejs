@@ -288,7 +288,7 @@
                                     <!-- <button id="signUpButton" class="signupButtonRegister">Sign up</button> -->
                                     <input type="submit" class="signupButtonRegister" value="Sign Up">
                                     <div class="newUser">
-                                        <p class="newUserRegister">Already registered? <a style="color: #00A5EC; font-weight: 600;" href="#">Login</a> </p>
+                                        <p class="newUserRegister">Already registered? <a style="color: #00A5EC; font-weight: 600;" href="loginPagebetween">Login</a> </p>
                                     </div>
                                 </form>
                             </div>
@@ -299,6 +299,7 @@
     <div id="footer">
 
     </div>
+    <div id="login-page"></div>
 </body>
 </html>
 <script type="module">
@@ -315,6 +316,62 @@
     document.querySelector(".subMenuSmall").style.height = "140px";
 
     document.querySelector(".subMenuSmall").style.width = "200px"
+    import loginPage from "/scripts/loginPage1.js";
+if (!all) {
+    document.getElementById("login-page").innerHTML = loginPage();
+
+    document
+      .getElementById("loginPagebetween")
+      .addEventListener("click", function () {
+        document.querySelector("#mainPageModel").style.display = "flex";
+        document.getElementById("navContainer").style.zIndex = "0";
+      });
+
+    document.querySelector(".close").addEventListener("click", function () {
+      document.querySelector("#mainPageModel").style.display = "none";
+      document.getElementById("navContainer").style.zIndex = "100";
+    });
+
+    document
+      .querySelector(".employerLogin")
+      .addEventListener("click", function () {
+        document.querySelector("#employerName").style.color = "#007bff";
+        document.querySelector(".employerLogin").style.border =
+          "2px solid #007bff";
+        document.querySelector(".employerLogin").style.borderLeft = "none";
+        document.querySelector(".employerLogin").style.borderRight = "none";
+        document.querySelector(".employerLogin").style.borderTop = "none";
+
+        document.querySelector(".studentLogin").style.border = "none";
+        document.querySelector("#studentName").style.color = "black";
+
+        document.querySelector(".forOr").style.display = "none";
+        document.querySelector(".forGoogle").style.display = "none";
+
+        document.querySelector(".mainContent").style.height = "400px";
+        document.querySelector(".inputModel").style.marginTop = "-16%";
+      });
+
+    document
+      .querySelector(".studentLogin")
+      .addEventListener("click", function () {
+        document.querySelector("#studentName").style.color = "#007bff";
+        document.querySelector(".studentLogin").style.border =
+          "2px solid #007bff";
+        document.querySelector(".studentLogin").style.borderLeft = "none";
+        document.querySelector(".studentLogin").style.borderRight = "none";
+        document.querySelector(".studentLogin").style.borderTop = "none";
+
+        document.querySelector(".employerLogin").style.border = "none";
+        document.querySelector("#employerName").style.color = "black";
+
+        document.querySelector(".forOr").style.display = "flex";
+        document.querySelector(".forGoogle").style.display = "flex";
+
+        document.querySelector(".mainContent").style.height = "500px";
+        document.querySelector(".inputModel").style.marginTop = "6%";
+      });
+  }
 
 
     document.getElementById("signUpButton").addEventListener("click",registrationForStudent)
