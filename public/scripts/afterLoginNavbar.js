@@ -202,7 +202,7 @@ function afterLogin(){
                     </ul>
                 </li>
                 <li class="fresher">
-                    <a class="fresherColor" href="/internshala/products/jobs">Fresher Jobs</a>
+                    <a class="fresherColor" href="/products/jobs">Fresher Jobs</a>
                 </li>
                 <li>
                     <a href="#" class="bookmarkDiv"><i id="bookMarkicon" class='bx bx-bookmark'></i></a>

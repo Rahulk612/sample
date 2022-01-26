@@ -202,7 +202,7 @@ function navBarRegistration(){
                     </ul>
                 </li>
                 <li class="fresher">
-                    <a class="fresherColor" href="/internshala/products/jobs">Fresher Jobs</a>
+                    <a class="fresherColor" href="/products/jobs">Fresher Jobs</a>
                 </li>
     
                 <li class="registerButton">
