@@ -11,7 +11,7 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: `http://localhost:${process.env.PORT || 5004}/auth/google/callback`,
+      callbackURL: `http://sampleclone-env.eba-9dmzyuuw.us-west-2.elasticbeanstalk.com/auth/google/callback`,
       userProfileUrl: "https://**www**.googleapis.com/oauth2/v3/userinfo",
       passReqToCallback: true,
     },
