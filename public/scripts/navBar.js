@@ -20,6 +20,7 @@ function navBar(){
                                 <li><a href="#">Internship in Pune</a></li>
                                 <li><a href="#">Internship in Kolkata</a></li>
                                 <li><a href="#">Internship in Jaipur</a></li>
+                                <li><a href="#">Internship in Kochi</a></li>
                                 <li><a href="#">International Internship</a></li>
                                 <li><a href="#">View all internship</a></li>
                             </ul>
